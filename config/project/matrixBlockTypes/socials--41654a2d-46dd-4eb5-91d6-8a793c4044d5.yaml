@@ -1,0 +1,93 @@
+field: 4b806747-6bc6-4e07-b458-06c8f3c042db # Socials
+fieldLayouts:
+  1645cdac-0dbc-4b50-a869-46bf904de5a0:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 047ebd95-0998-4c6f-9108-46b7d507dec6 # Vendor
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 95e24d75-5bb4-46f3-84d0-54529e12e435 # URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  047ebd95-0998-4c6f-9108-46b7d507dec6: # Vendor
+    columnSuffix: qafwfizg
+    contentColumnType: string
+    fieldGroup: null
+    handle: vendor
+    instructions: ''
+    name: Vendor
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Twitter
+            -
+              - value
+              - twitter
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Facebook
+            -
+              - value
+              - facebook
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Linkedin
+            -
+              - value
+              - linkedin
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  95e24d75-5bb4-46f3-84d0-54529e12e435: # URL
+    columnSuffix: tlaeeeqa
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: vendorUrl
+    instructions: ''
+    name: URL
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: null
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+handle: socials
+name: Socials
+sortOrder: 1

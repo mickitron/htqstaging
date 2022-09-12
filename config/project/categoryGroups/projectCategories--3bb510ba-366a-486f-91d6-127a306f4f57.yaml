@@ -1,0 +1,41 @@
+defaultPlacement: end
+fieldLayouts:
+  eaa28174-fad3-4f8f-9a5d-a64a0e0e5459:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: projectCategories
+name: 'Project categories'
+siteSettings:
+  15197aeb-10d6-4ef2-a919-6bcc6108a1e8: # Health Translation Queensland
+    hasUrls: true
+    template: null
+    uriFormat: 'project-categorues/{slug}'
+structure:
+  maxLevels: null
+  uid: 6623f9d4-7034-445d-af8c-9cd6b171e427

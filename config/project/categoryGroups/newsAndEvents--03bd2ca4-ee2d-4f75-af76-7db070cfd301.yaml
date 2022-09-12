@@ -1,0 +1,41 @@
+defaultPlacement: end
+fieldLayouts:
+  b3c5d770-ca02-4faf-ae43-0cb25155697f:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: newsAndEvents
+name: 'News and events'
+siteSettings:
+  15197aeb-10d6-4ef2-a919-6bcc6108a1e8: # Health Translation Queensland
+    hasUrls: true
+    template: news-categories/index
+    uriFormat: 'news-and-events/{slug}'
+structure:
+  maxLevels: null
+  uid: 0b53a3d3-0c68-4f6d-8dfa-a2349032aac4

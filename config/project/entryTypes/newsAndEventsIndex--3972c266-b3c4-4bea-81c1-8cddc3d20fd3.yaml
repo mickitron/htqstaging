@@ -1,0 +1,38 @@
+fieldLayouts:
+  c27ec934-4573-4508-ace3-f2dffe3c81c0:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: newsAndEventsIndex
+hasTitleField: true
+name: 'News and events index'
+section: 4d6174ad-64f6-4358-ad88-8baf73b00755 # Pages
+sortOrder: 6
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

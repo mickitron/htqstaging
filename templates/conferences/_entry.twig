@@ -1,0 +1,466 @@
+{% extends 'partials/_base.twig' %}
+
+{% block content %}
+
+    {% include 'pages/partials/_tierThreeHeader.twig' %}
+
+<section class="relative">
+    <div class="absolute h-auto xl:h-[400px] bg-htq_blue inset-0 conference-banner">
+        <img class="block absolute right-0 bottom-0 h-full" src="{{ siteUrl }}dist/img/watermark-right-tier-one.svg" alt="" role="presentation">
+    </div>
+    <div class="lg:absolute h-auto xl:h-[400px] bg-htq_green inset-0 overflow-hidden p-8 lg:p-0">
+    {% if entry.image.one() | length %}
+        {% set optimisedImage = entry.image.one().optimisedImage %}
+        <div class="aspect-w-16 aspect-h-9 lg:aspect-h-7 relative">
+            <div class="absolute inset-0 bg-htq_mid_teal w-full h-full bg-opacity-0 group-hover:bg-opacity-50 transition duration-500 ease-in-out" style="z-index: 1;"></div>
+            <img class="lazyload absolute w-full h-full object-cover"
+                    src="{{ optimisedImage.placeholderBox() }}"
+                    data-srcset="{{ optimisedImage.srcset() }}"
+                    sizes="100vw" />
+        </div>
+    {% endif %}
+    </div>
+
+    <div class="relative max-w-7xl mx-auto font-light px-8 xl:px-0 lg:flex flex-row">
+            <div class="lg:w-1/2">
+                <div class="bg-htq_mid_green hidden xl:flex">
+                    {% set navMatrix = entry.navigationMatrix %}
+                        {% if navMatrix | length %}
+                            {% for menu in navMatrix.all() %}
+                                    {# Or - alternatively #}
+                                    {% set nodes = craft.navigation.nodes(menu.menu).all() %}
+                                    <ul class="conf-nav font-semibold p-4 w-full lg:flex flex-row justify-around text-white">
+                                        {% nav node in nodes %}
+                                            <li class="text-sm">
+                                                {{ node.link }}
+                                                {% ifchildren %}
+                                                    <ul>
+                                                        {% children %}
+                                                    </ul>
+                                                {% endifchildren %}
+                                            </li>
+                                        {% endnav %}
+                                    </ul>
+                            {% endfor %}
+                        {% endif %}
+                </div>
+                <h1 class="text-lg lg:text-xl mb-8 text-white font-semibold lg:py-32">{{ entry.title }}</h1>
+            </div>
+                
+            <div class="lg:w-1/2 relative">
+                <div class="bg-htq_teal text-white lg:absolute bottom-neg-8 right-0 left-0 lg:max-w-3xl mx-auto p-12">
+                    {% set conferenceDetails = entry.conferenceCta.all() %}
+                    {% if conferenceDetails | length %}
+                        {% for conferenceDetail in conferenceDetails %}
+                            {% if conferenceDetail.conferenceDate %}
+                                <div class="flex flex-row space-x-4 items-center border-b border-white pb-4">
+                                    <p class="mb-0 font-light text-md"><span class="text-sm mr-2">Date: </span>{{ conferenceDetail.conferenceDate }}</p>
+                                </div>
+                            {% endif %}
+                            {% if conferenceDetail.conferenceVenue %}
+                                <div class="flex flex-row space-x-4 items-center border-b border-white py-4">
+                                    <p class="mb-0 font-light text-md"><span class="text-sm mr-2">Venue: </span>{{ conferenceDetail.conferenceVenue }}</p>
+                                </div>
+                            {% endif %}
+                            {% if conferenceDetail.registerLink %}
+                                <div class="flex flex-row space-x-4 items-center">
+                                    <a class="button-white-outline" type="button" href="{{ conferenceDetail.registerLink }}">{{ conferenceDetail.registerText }} <img src="{{ siteUrl }}dist/img/right-arrow-light.svg" alt="" role="presentation"></a>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+</section>
+
+<section>
+    <div class="max-w-7xl mx-auto py-8 font-light px-0 xl:px-0">
+        <div class="w-full lg:w-1/2">
+            {% set navMatrix = entry.navigationMatrix %}
+                {% if navMatrix | length %}
+                    {% for menu in navMatrix.all() %}
+                            {# Or - alternatively #}
+                            {% set nodes = craft.navigation.nodes(menu.menu).all() %}
+                            <ul class="conf-nav font-semibold grid md:grid-cols-2 gap-4 text-htq_blue px-8 xl:px-0">
+                                {% nav node in nodes %}
+                                    <li class="py-4 text-sm border-b border-lightGrey">
+                                        {{ node.link }}
+                                        {% ifchildren %}
+                                            <ul>
+                                                {% children %}
+                                            </ul>
+                                        {% endifchildren %}
+                                    </li>
+                                {% endnav %}
+                            </ul>
+                    {% endfor %}
+                {% endif %}
+        </div>
+        <div class="flex lg:flex-row flex-col py-32">
+            {% set conferenceIntroItems = entry.twoColumnImageRight.all() %}
+            {% if conferenceIntroItems | length %}
+            <div class="w-full lg:w-1/2 lg:border-b lg:border-lightGrey px-8 xl:px-0">
+                <div class="prose lg:pr-16 p-0">
+                {% for conferenceIntro in conferenceIntroItems %}
+                    {% if conferenceIntro.heading %}
+                        <h1>{{ conferenceIntro.heading }}</h1>
+                    {% endif %}
+                    {% if conferenceIntro.text %}
+                        <p>{{ conferenceIntro.text }}</p>
+                    {% endif %}
+                    {% endfor %}
+            </div>
+            </div>
+            <div class="w-full lg:w-1/2">
+                <div class="block w-full h-[700px] relative pl-8 xl:pl-0">
+                {% for conferenceIntro in conferenceIntroItems %}
+                    {% if conferenceIntro.image | length %}
+                    {% set optimizedImage = conferenceIntro.image.one().optimisedImage %}
+                        <img class="lazyload absolute object-cover w-full h-full"
+                            src="{{ optimizedImage.placeholderBox() }}"
+                            data-srcset="{{ optimizedImage.srcset() }}"
+                            sizes="100vw" />
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section class="overflow-hidden" id="speakers">
+    <div class="max-w-7xl mx-auto px-8 xl:px-0">
+        {% set speakerSlides = entry.relatedSpeakers.all() %}
+        {% if speakerSlides | length %}
+        <div class="lg:block speakerSwiper">
+            <h1 class="mb-8 text-htq_blue font-semibold">{{ entry.heading }}</h1>
+            <div class="flex flex-row justify-end space-x-2 mb-4">
+                <img class="opacity-50 cursor-pointer hover:opacity-100 transition duration-500 ease-in-out prev" src="{{ siteUrl }}dist/img/left-arrow.svg" alt="" role="presentation">
+                <img class="opacity-50 cursor-pointer hover:opacity-100 transition duration-500 ease-in-out next" src="{{ siteUrl }}dist/img/right-arrow.svg" alt="" role="presentation">
+            </div>
+            <div class="swiper-wrapper relative">
+                {% for slide in speakerSlides %}
+                    <a class="swiper-slide bg-white hover:bg-htq_blue border border-hoverBg hover:border-htq_blue flex flex-col p-4 relative group transition duration-500 ease-in-out" href="{{ slide.url }}">
+                        <div class="h-16 flex flex-col justify-center">
+                                <p class="text-right pl-16 text-copy opacity-40 group-hover:text-white group-hover:opacity-100 transition duration-500 ease-in-out leading-normal text-sm">{{ slide.positionAndQualifications }}</p>
+                        </div>
+                        {% if slide.photo | length %}
+                                {% set optimizedImage = slide.photo.one().optimisedImage %}
+                                <img class="w-3/4 mx-auto lazyload rounded-full"
+                                    src="{{ optimizedImage.placeholderBox() }}"
+                                    data-srcset="{{ optimizedImage.srcset() }}"
+                                    sizes="100vw" />
+                        {% endif %}
+                        <h3 class="text-md text-htq_blue font-bold mt-8 group-hover:text-white transition duration-500 ease-in-out w-3/4">{{ slide.title }}</h3>
+                        <div class="absolute p-4 bg-hoverBg group-hover:bg-white transition duration-500 ease-in-out bottom-0 right-0">
+                                <svg class="fill-current text-white group-hover:text-htq_blue transition duration-500 ease-in-out" width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.2 9.32H9.42V16.2H6.78V9.32H0V6.88H6.78V0H9.42V6.88H16.2V9.32Z"/>
+                                </svg>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<section>
+    <div class="max-w-7xl mx-auto py-32 xl:px-0">
+        <div class="relative overflow-hidden bg-htq_green text-white lg:p-16 p-8 flex lg:flex-row flex-col countdown items-center">
+        {% set conferenceCountdown = entry.conferenceCountdown.all() %}
+            {% if conferenceCountdown | length %}
+                <div class="w-full lg:w-1/3 pr-8">
+                    {% for countdownItem in conferenceCountdown %}
+                        {% if countdownItem.heading %}
+                            <h1>{{ countdownItem.heading }}</h1>
+                        {% endif %}
+                        {% if countdownItem.text %}
+                            <p>{{ countdownItem.text }}</p>
+                        {% endif %}
+                        {% if countdownItem.registerLink %}
+                            <div class="flex flex-row space-x-4 items-center">
+                                <a class="button-white-outline" type="button" href="{{ countdownItem.registerLink }}">{{ countdownItem.registerText }}  <img src="{{ siteUrl }}dist/img/right-arrow-light.svg" alt="" role="presentation"></a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="w-full lg:w-2/3 pt-8 lg:pt-0" style="z-index: 1;">
+                    {% for countdownItem in conferenceCountdown %}
+                        {% if countdownItem.time %}
+                            <div id="timer" data-entry-info='{{ countdownItem.time|date('M j, Y') }}' class="grid lg:grid-cols-4 grid-cols-2 gap-4 text-htq_green">
+                                <div id="days" class="text-center countdown-circle"></div>
+                                <div id="hours" class="text-center countdown-circle"></div>
+                                <div id="minutes" class="text-center countdown-circle"></div>
+                                <div id="seconds" class="text-center countdown-circle"></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <img class="countdown-bg block absolute" src="{{ siteUrl }}dist/img/Counter_bg.svg" alt="" role="presentation">
+        </div>
+    </div>
+</section>
+
+<section id="program">
+    <div class="max-w-7xl mx-auto px-4 xl:px-0">
+            <div class="w-full flex lg:flex-row flex-col justify-between px-4"> 
+            {% set conferenceProgramTitle = entry.conferenceProgramTitle.all() %}
+            {% if  conferenceProgramTitle | length %}
+                {% for item in conferenceProgramTitle %}
+                    {% if item.heading %}
+                        <h1 class="text-htq_blue font-semibold" >{{ item.heading }}</h1>
+                    {% endif %}
+                    {% if item.downloadFile %}
+                        <div class="flex flex-row space-x-4 items-center">
+                            <a class="button-htq-mid-teal-fill" type="button" href="{{ item.downloadFile }}">{{ item.downloadText }}  <img src="{{ siteUrl }}dist/img/right-arrow-light.svg" alt="" role="presentation"></a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            </div>
+            {% set conferenceProgram = entry.conferenceProgram.all() %}
+            {% if  conferenceProgram | length %}
+            <div class="accordion program-accordion" id="programAccordion">
+                    {% for event in conferenceProgram %}
+                    <div class="accordion-item">
+                    {% if event.day %}
+                        <h2 class="accordion-header relative" id="heading{{ loop.index }}"><button class="accordion-button font-semibold text-left" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}" aria-expanded="true"
+                        aria-controls="collapse{{ loop.index }}">{{ event.day }} <span></span> {{ event.date }}</button></h2>
+                    {% endif %}
+                    {% if event.text %}
+                        <div id="collapse{{ loop.index }}" class="accordion-collapse collapse {{ loop.index == 1 ? 'show' : '' }}" aria-labelledby="heading{{ loop.index }}" data-bs-parent="#programAccordion">
+                            <div>{{ event.text }}</div>
+                        </div>
+                    {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<section>
+    <div class="max-w-7xl mx-auto lg:pt-32 pt-16 relative">
+    {% set ctaSection = entry.ctaSection.all() %}
+        {% if  ctaSection | length %}
+        {% for cta in ctaSection %}
+        <div class="relative cta-wrap text-white lg:text-center text-left lg:p-16 p-8 flex flex-col items-center" style="background-color: {{ cta.backgroundColour }};">
+            <img class="block absolute cta-left" src="{{ siteUrl }}dist/img/CTA_left.svg" alt="" role="presentation">
+            <img class="block absolute cta-right" src="{{ siteUrl }}dist/img/CTA_right.svg" alt="" role="presentation">
+            <div style="z-index: 1;">
+                <h1 class="font-semibold">{{ cta.heading }}</h1>
+                <p>{{ cta.text }}</p>
+                <a class="button-white-outline" type="button" href="{{ cta.buttonLink }}">{{ cta.buttonText }}  <img src="{{ siteUrl }}dist/img/right-arrow-light.svg" alt="" role="presentation"></a>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</section>
+
+<section class="bg-lightBg lg:my-32 mb-16 " id="sponsors">
+    <div class="max-w-7xl mx-auto">
+        <div class="py-16 px-8 flex items-center flex-col relative">
+            <h1 class="text-htq_blue font-semibold pb-12">{{ entry.sponsorsTitle }}</h1>
+            {% set conferenceSponsors = entry.conferenceSponsors.all() %}
+            {% if  conferenceSponsors | length %}
+                <div class="flex lg:flex-row flex-col">
+                {% for sponsor in conferenceSponsors %}
+                    {% if sponsor.image | length %}
+                        {% set optimizedImage = sponsor.image.one().optimisedImage %}
+                        <div class="relative">
+                        <img class="mx-auto lazyload"
+                            src="{{ optimizedImage.placeholderBox() }}"
+                            data-srcset="{{ optimizedImage.srcset() }}"
+                            />
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="max-w-7xl mx-auto px-4 xl:px-0">
+        <div class="py-12 lg:px-12 px-4 bg-htq_lightBlue lg:flex-row relative">
+            <div class="w-full flex flex-row justify-between"> 
+                {% if entry.faqTitle %}
+                    <h1 class="text-htq_blue font-semibold" >{{ entry.faqTitle }}</h1>
+                {% endif %}
+            </div>
+            {% set faqAccordion = entry.faqAccordion.all() %}
+            {% if  faqAccordion | length %}
+                <div class="accordion faq-accordion" id="faqAccordion">
+                        {% for faq in faqAccordion %}
+                        <div class="accordion-item">
+                        {% if faq.question %}
+                            <h2 class="accordion-header relative" id="faqheading{{ loop.index }}"><button class="accordion-button font-semibold text-left" type="button" data-bs-toggle="collapse" data-bs-target="#faqcollapse{{ loop.index }}" aria-expanded="true"
+                            aria-controls="collapse{{ loop.index }}">{{ faq.question }}</button></h2>
+                        {% endif %}
+                        {% if faq.answer %}
+                            <div id="faqcollapse{{ loop.index }}" class="accordion-collapse collapse {{ loop.index == 1 ? 'show' : '' }}" aria-labelledby="faqheading{{ loop.index }}" data-bs-parent="#faqAccordion">
+                                <div>{{ faq.answer }}</div>
+                            </div>
+                        {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section class="overflow-hidden">
+    <div class="max-w-7xl lg:py-32 py-16 lg:px-12 px-8 mx-auto lg:flex-row space-x-0 space-y-8 lg:space-y-0 lg:space-x-16 relative">
+        {% set testimonialSlides = entry.testimonials.all() %}
+        {% if testimonialSlides | length %}
+        <div class="lg:block testimonialSwiper">
+            <h1 class="mb-8 text-lightGrey font-semibold">{{ entry.testimonialTitle }}</h1>
+            <div class="flex flex-row justify-end space-x-2 mb-4">
+                <img class="opacity-50 cursor-pointer hover:opacity-100 transition duration-500 ease-in-out prev" src="{{ siteUrl }}dist/img/left-arrow.svg" alt="" role="presentation">
+                <img class="opacity-50 cursor-pointer hover:opacity-100 transition duration-500 ease-in-out next" src="{{ siteUrl }}dist/img/right-arrow.svg" alt="" role="presentation">
+            </div>
+            <div class="swiper-wrapper relative">
+                {% for testimonialSlide in testimonialSlides %}
+                    <div class="swiper-slide bg-white flex flex-col p-4 relative group transition duration-500 ease-in-out">
+                        <div class="flex flex-col justify-center">
+                            <h3 class="font-semibold text-htq_blue">{{ testimonialSlide.heading }}</h3>
+                            <p>{{ testimonialSlide.text }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<section class="relative mx-auto px-8 xl:px-0" id="contact">
+    <div class="absolute h-half md:h-80 bg-htq_blue w-full bottom-0 left-0"></div>
+    {% set contactBlock = entry.conferenceContact.all() %}
+    {% if contactBlock | length %}
+        {% for contact in contactBlock %}
+            <div class="max-w-7xl mx-auto bg-htq_mid_teal lg:p-12 p-8 flex flex-col lg:flex-row space-x-0 space-y-8 lg:space-y-0 lg:space-x-16 relative">
+                <div class="w-full lg:w-1/2">
+                    <h1 class="font-semibold text-white mt-12 mb-8">
+                        {{ contact.heading }}
+                    </h1>
+                    <div class="text-white font-light contactText prose">
+                        {{ contact.text }}
+
+                        {% if contact.phone %}
+                            <div class="flex flex-row space-x-4 items-center">
+                                <img src="{{ siteUrl }}dist/img/phone-icon.svg" alt="" role="presentation">
+                                <p class="mb-0 text-white font-light text-md">{{ contact.phone }}</p>
+                            </div>
+                            <div class="w-full h-[1px] bg-white bg-opacity-30"></div>
+                        {% endif %}
+                        {% if contact.email %}
+                            <div class="flex flex-row space-x-4 items-center">
+                                <img src="{{ siteUrl }}dist/img/envelope-white.svg" alt="" role="presentation">
+                                <p class="mb-0 text-white font-light text-md break-all md:break-normal">{{ contact.email }}</p>
+                            </div>
+                            <div class="w-full h-[1px] bg-white bg-opacity-30"></div>
+                        {% endif %}
+                        {% if contact.address %}
+                            <div class="flex flex-row space-x-4 items-start">
+                                <img src="{{ siteUrl }}dist/img/map-pin-icon.svg" alt="" role="presentation">
+                                <p class="mb-0 text-white font-light text-base">{{ contact.address | nl2br }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    {% if contact.form | length %}
+                        <div class="block bg-white p-8 contactForm">
+                            {{ contact.form.render() }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+    <script>
+    const swiper = new Swiper('.speakerSwiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        spaceBetween: 30,
+        slidesPerView: "1.2",
+        // Navigation arrows
+        navigation: {
+            nextEl: '.next',
+            prevEl: '.prev',
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: "3",
+                spaceBetween: 30,
+            },
+        },
+    });
+    const swiper2 = new Swiper('.testimonialSwiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        spaceBetween: 30,
+        slidesPerView: "1.2",
+        // Navigation arrows
+        navigation: {
+            nextEl: '.next',
+            prevEl: '.prev',
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: "3",
+                spaceBetween: 30,
+            },
+        },
+    });
+    
+    function makeTimer() {
+
+        var countdownTimer = document.querySelector('#timer');
+        var timer = countdownTimer.dataset.entryInfo;
+
+		var endTime = new Date(timer);
+        		
+        endTime = (Date.parse(endTime) / 1000);
+
+        var now = new Date();
+        now = (Date.parse(now) / 1000);
+
+        var timeLeft = endTime - now;
+
+        var days = Math.floor(timeLeft / 86400); 
+        var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+        var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+        var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+        if (hours < "10") { hours = "0" + hours; }
+        if (minutes < "10") { minutes = "0" + minutes; }
+        if (seconds < "10") { seconds = "0" + seconds; }
+
+        $("#days").html(days + "<span>Days</span>");
+        $("#hours").html(hours + "<span>Hours</span>");
+        $("#minutes").html(minutes + "<span>Minutes</span>");
+        $("#seconds").html(seconds + "<span>Seconds</span>");		
+
+	}
+
+	setInterval(function() { makeTimer(); }, 1000);
+
+    $('.countdown-circle').height($('.countdown-circle').width());
+    </script>
+{% endblock %}

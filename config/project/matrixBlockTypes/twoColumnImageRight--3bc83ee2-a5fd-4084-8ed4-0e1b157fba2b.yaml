@@ -1,0 +1,137 @@
+field: e5b1dd21-c0a3-4b40-85eb-e291eeec85e2 # Two Column Image Right
+fieldLayouts:
+  d3c5018b-5e91-4ee6-acbc-c2f029beaa8d:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 020f76bb-8b61-4ba1-b680-c082caae8790 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7e017cb3-3f25-481b-bb54-a3cbceab3849
+            warning: null
+            width: 100
+          -
+            fieldUid: 81f1e7d8-d696-4cd0-a1a1-a6dca15dbbeb # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 724b1522-05a6-41a0-90de-ddc547d12279
+            warning: null
+            width: 100
+          -
+            fieldUid: bdd1a5ec-d3c1-456a-a6d8-b1043d7a1a17 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 07d4f57c-faf7-4c5c-9057-c5fa60bf137f
+            warning: null
+            width: 100
+        name: Content
+        uid: e25d1b74-554f-477e-9924-c564422b408e
+fields:
+  020f76bb-8b61-4ba1-b680-c082caae8790: # Heading
+    columnSuffix: axcilimm
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  81f1e7d8-d696-4cd0-a1a1-a6dca15dbbeb: # Text
+    columnSuffix: yusdwmiu
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  bdd1a5ec-d3c1-456a-a6d8-b1043d7a1a17: # Image
+    columnSuffix: dhfdwrmf
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:366669c1-fe40-4067-b625-311d2125278b' # Uploads
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:366669c1-fe40-4067-b625-311d2125278b' # Uploads
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: twoColumnImageRight
+name: 'Two Column Image Right'
+sortOrder: 1

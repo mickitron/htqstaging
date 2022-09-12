@@ -1,0 +1,22 @@
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+    {% for person in relatedPeople.all() %}
+        <a class="bg-white hover:bg-htq_blue border border-hoverBg hover:border-htq_blue flex flex-col p-4 relative group transition duration-500 ease-in-out" href="{{ person.url }}">
+                <div class="h-16 flex flex-col justify-center">
+                        <p class="text-right pl-16 text-copy opacity-40 group-hover:text-white group-hover:opacity-100 transition duration-500 ease-in-out leading-normal text-sm">{{ person.positionAndQualifications }}</p>
+                </div>
+                {% if person.photo | length %}
+                        {% set optimizedImage = person.photo.one().optimisedImage %}
+                        <img class="w-3/4 mx-auto lazyload rounded-full"
+                             src="{{ optimizedImage.placeholderBox() }}"
+                             data-srcset="{{ optimizedImage.srcset() }}"
+                             sizes="100vw" />
+                {% endif %}
+                <h3 class="text-md text-htq_blue font-bold mt-8 group-hover:text-white transition duration-500 ease-in-out w-3/4">{{ person.title }}</h3>
+                <div class="absolute p-4 bg-hoverBg group-hover:bg-white transition duration-500 ease-in-out bottom-0 right-0">
+                        <svg class="fill-current text-white group-hover:text-htq_blue transition duration-500 ease-in-out" width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.2 9.32H9.42V16.2H6.78V9.32H0V6.88H6.78V0H9.42V6.88H16.2V9.32Z"/>
+                        </svg>
+                </div>
+        </a>
+    {% endfor %}
+</div>

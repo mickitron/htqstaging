@@ -1,0 +1,18 @@
+<h2>Theme leaders</h2>
+{% for person in themeLeaders.all() %}
+    <div id="prose">
+        <a class="themeLink hover:opacity-50 transition duration-500 ease-in-out" href="{% if person.externalLink %}{{ person.externalLink }}{% else %}#{% endif %}" {% if person.externalLink %}target="_blank"{% endif %}>
+            <h3 class="mb-2" style="margin-bottom: 0.4rem !important;">{{ person.title }}</h3>
+            <h4 style="margin-bottom: 1rem !important;">{{ person.institution }}</h4>
+        </a>
+        {% if person.relatedThemes | length %}
+            <h5 class="font-bold">Themes:</h5>
+            <div class="flex flex-row space-x-4">
+                {% for theme in person.relatedThemes.all() %}
+                    <a href="{{ theme.url }}">{{ theme.title }}</a>
+                {% endfor %}
+            </div>
+            <hr>
+        {% endif %}
+    </div>
+{% endfor %}

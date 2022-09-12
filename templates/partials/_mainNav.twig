@@ -1,0 +1,33 @@
+<section class="bg-htq_blue">
+    <div class="max-w-7xl mx-auto py-8 lg:pt-16 lg:pb-14 px-8 xl:px-0">
+        <div class="flex flex flex-row justify-between items-center">
+            <a class="w-7/12 xl:w-1/3" href="/">
+                <img src="{{ siteUrl }}dist/img/htq-logo-white.svg" alt="Health Translation Queensland">
+            </a>
+            <div class="flex flex-row space-x-8 items-center">
+                {% set nodes = craft.navigation.nodes('mainNavigation').all() %}
+                <ul class="hidden xl:flex flex-row space-x-6 text-sm text-htq_sky font-semibold mainNav">
+                    {% nav node in nodes %}
+                        <li class="relative group {% if node.active %}text-white{% endif %}">
+                            {{ node.link }}
+                            {% ifchildren %}
+
+                                <ul class="absolute w-48 left-0 pt-4 hidden group-hover:block subMenu" style="z-index: 2;">
+                                    {% children %}
+                                </ul>
+                            {% endifchildren %}
+                        </li>
+                    {% endnav %}
+                </ul>
+                <div class="flex flex-row space-x-4">
+                    <a class="searchTrigger" href="#">
+                        <img src="{{ siteUrl }}dist/img/search-icon.svg" alt="" role="presentation">
+                    </a>
+                    <a class="openMenu" href="#">
+                        <img src="{{ siteUrl }}dist/img/nav-icon.svg" alt="" role="presentation">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

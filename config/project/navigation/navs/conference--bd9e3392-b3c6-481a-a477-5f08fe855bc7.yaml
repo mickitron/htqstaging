@@ -1,0 +1,163 @@
+defaultPlacement: end
+fieldLayouts:
+  8a84c3cd-8b9d-428a-9e92-a83753c82596:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 190bf1aa-25df-41b8-b6d9-cb7c32fd2045
+            warning: null
+            width: 100
+          -
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: verbb\navigation\fieldlayoutelements\NodeTypeElements
+            uid: e160ae9a-13d3-49a7-8fbe-7ac5639167ad
+            warning: null
+          -
+            attribute: newWindow
+            id: null
+            instructions: null
+            label: null
+            mandatory: false
+            orientation: null
+            requirable: true
+            required: false
+            tip: null
+            translatable: false
+            type: verbb\navigation\fieldlayoutelements\NewWindowField
+            uid: baf7a4c3-6b49-450f-a4c0-6c494017f6b6
+            warning: null
+            width: 100
+        name: Node
+        uid: ae6bcb74-c986-4405-b39c-559f2e88c614
+      -
+        elements:
+          -
+            attribute: urlSuffix
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            mandatory: false
+            max: null
+            maxlength: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: true
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            translatable: false
+            type: verbb\navigation\fieldlayoutelements\UrlSuffixField
+            uid: c796c2bc-631a-4f6a-8b84-3cb27626c9f3
+            warning: null
+            width: 100
+          -
+            attribute: classes
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            mandatory: false
+            max: null
+            maxlength: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: true
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            translatable: false
+            type: verbb\navigation\fieldlayoutelements\ClassesField
+            uid: aadb9991-c874-4503-a86d-59727a6a9e02
+            warning: null
+            width: 100
+          -
+            attribute: customAttributes
+            id: null
+            instructions: null
+            label: null
+            mandatory: false
+            orientation: null
+            requirable: true
+            required: false
+            tip: null
+            translatable: false
+            type: verbb\navigation\fieldlayoutelements\CustomAttributesField
+            uid: adc58a20-b36d-433e-9604-ac5e2a5552b9
+            warning: null
+            width: 100
+        name: Advanced
+        uid: 0afd878b-e99a-448a-b548-22b73acbcb61
+handle: conference
+instructions: ''
+maxNodes: null
+name: Conference
+permissions:
+  craft\elements\Asset:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Category:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Entry:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Tag:
+    enabled: ''
+    permissions: '*'
+  verbb\navigation\nodetypes\CustomType:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: '1'
+propagateNodes: false
+siteSettings:
+  15197aeb-10d6-4ef2-a919-6bcc6108a1e8: # Health Translation Queensland
+    enabled: true
+sortOrder: 4
+structure:
+  maxLevels: null
+  uid: 637079b2-edd3-424c-a252-f16ce43226b0

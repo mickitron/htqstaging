@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-AU
+name: 'Health Translation Queensland'
+primary: true
+siteGroup: e3a29992-aa74-4993-a8ae-768a34433977 # Health Translation Queensland
+sortOrder: 1

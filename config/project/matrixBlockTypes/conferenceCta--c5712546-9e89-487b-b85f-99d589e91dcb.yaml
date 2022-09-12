@@ -1,0 +1,127 @@
+field: 11cfc561-52bc-472f-901c-e106f0efea9a # Conference CTA
+fieldLayouts:
+  7271ca3d-a92d-4fc9-ad33-7bad32b06610:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a25aa1b3-7526-4939-84dd-55d48a49e19f # Conference Date
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 44b76d72-9522-4e77-b57f-8b190ecc4552
+            warning: null
+            width: 100
+          -
+            fieldUid: ba049758-064b-46cd-86b2-6d115b97e32f # Conference Venue
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 16d18045-8a50-402a-8fdb-4bead3e579e5
+            warning: null
+            width: 100
+          -
+            fieldUid: 40ddbd64-9eee-4175-8f43-4ffb65aabb31 # Register Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cb02d0be-368d-4e04-998c-ead31bf193a8
+            warning: null
+            width: 100
+          -
+            fieldUid: b9589de4-ac73-409a-af87-76d5986209fb # Register Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9f23dae6-8f20-47a4-b906-7425ee2d9f42
+            warning: null
+            width: 100
+        name: Content
+        uid: e982f863-f36d-4381-b3ec-0c1b254bc42a
+fields:
+  40ddbd64-9eee-4175-8f43-4ffb65aabb31: # Register Text
+    columnSuffix: ovyzlyer
+    contentColumnType: text
+    fieldGroup: null
+    handle: registerText
+    instructions: null
+    name: 'Register Text'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a25aa1b3-7526-4939-84dd-55d48a49e19f: # Conference Date
+    columnSuffix: cupfjnuh
+    contentColumnType: text
+    fieldGroup: null
+    handle: conferenceDate
+    instructions: null
+    name: 'Conference Date'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b9589de4-ac73-409a-af87-76d5986209fb: # Register Link
+    columnSuffix: qqfuebrn
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: registerLink
+    instructions: null
+    name: 'Register Link'
+    searchable: false
+    settings:
+      maxLength: 255
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  ba049758-064b-46cd-86b2-6d115b97e32f: # Conference Venue
+    columnSuffix: iwcvkgvj
+    contentColumnType: text
+    fieldGroup: null
+    handle: conferenceVenue
+    instructions: null
+    name: 'Conference Venue'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: conferenceCta
+name: 'Conference CTA'
+sortOrder: 1

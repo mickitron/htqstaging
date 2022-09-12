@@ -1,0 +1,69 @@
+field: 8d39f5fb-c63c-4a46-b9df-741619ccaa3d # Conference Sponsors
+fieldLayouts:
+  fc5bbed8-6688-457a-8216-301e6c58acc6:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: fca7f9aa-63e5-4e82-9a21-711f6653f18c # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e3765efe-3405-455a-b441-f0a89c211dab
+            warning: null
+            width: 100
+        name: Content
+        uid: 9496869f-f1bf-4268-bb86-bdca8edf735c
+fields:
+  fca7f9aa-63e5-4e82-9a21-711f6653f18c: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:366669c1-fe40-4067-b625-311d2125278b' # Uploads
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:366669c1-fe40-4067-b625-311d2125278b' # Uploads
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: sponsor
+name: Sponsor
+sortOrder: 1

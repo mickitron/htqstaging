@@ -1,0 +1,19 @@
+columnSuffix: pzmrljew
+contentColumnType: text
+fieldGroup: 9b563bed-e98a-4151-909c-4d45e608fd39 # Globals
+handle: acknowledgementOfCountry
+instructions: ''
+name: 'Acknowledgement of country'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

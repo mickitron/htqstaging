@@ -1,0 +1,133 @@
+{% extends 'partials/_base' %}
+
+{% block content %}
+
+    {% include 'partials/_homeHeader' %}
+
+    <section class="w-full relative">
+        <div class="max-w-7xl mx-auto py-16 px-8 xl:px-0">
+            <div class="flex flex-col lg:flex-row justify-between">
+                {% set featuredPages = entry.featuredPages.all() %}
+                {% if featuredPages | length %}
+                    <div class="w-full lg:w-7/12 flex flex-col md:flex-row space-x-0 space-y-8 md:space-y-0 md:space-x-4">
+                        {% for page in featuredPages %}
+                            <a href="{{ page.url }}" class="w-full md:w-1/2 group">
+                                <div class="flex flex-row space-x-2 items-center mb-4">
+                                    <p class="text-htq_blue text-md font-semibold mb-0">{{ page.title }}</p>
+                                    <img src="{{ siteUrl }}dist/img/right-arrow.svg" alt="" role="presentation">
+                                </div>
+                                {% if page.seoImage.one() | length %}
+                                    {% set optimisedImages = page.seoImage.one().optimisedImage %}
+                                    <div class="aspect-w-16 aspect-h-9 relative">
+                                        <div class="absolute inset-0 bg-htq_mid_teal w-full h-full bg-opacity-0 group-hover:bg-opacity-50 transition duration-500 ease-in-out" style="z-index: 1;"></div>
+                                        <img class="lazyload absolute w-full h-full object-cover"
+                                             src="{{ optimisedImages.placeholderBox() }}"
+                                             data-srcset="{{ optimisedImages.srcset() }}"
+                                             sizes="100vw" />
+                                    </div>
+                                {% endif %}
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                <div class="w-full md:w-5/12 flex flex-col mt-8 lg:mt-auto">
+                    {% set alert = entry.alertLink.one() %}
+                    {% if alert | length %}
+                        <a class="mt-auto" href="{{ (alert.relatedPage.one()) ? alert.relatedPage.one().url : alert.externalLink }}">
+                            <div class="flex flex-row items-center justify-center space-x-2">
+                                {% set icon = alert.icon.one() %}
+                                {% if icon | length %}
+                                    <img src="{{ icon.url }}" alt="{{ icon.title }}">
+                                {% endif %}
+                                <p class="text-base font-semibold text-htq_blue mb-0">{{ alert.linkText }}</p>
+                                <img src="{{ siteUrl }}dist/img/right-arrow.svg" alt="" role="presentation">
+                            </div>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% if entry.featuredNewsAndEvents.all() | length %}
+        <section class="bg-white py-8 px-8 xl:px-0">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-lg text-htq_blue font-bold mb-4">News & events</h2>
+                {% for row in entry.featuredNewsAndEvents.all()|batch(3, 'No item') %}
+                    <div class="grid grid-cols-12 gap-6">
+                        {% for entry in row %}
+                            <a href="{{ entry.url }}" class="{{ loop.index == 1 ? 'col-span-12 lg:col-span-6' : 'col-span-12 lg:col-span-3' }} relative border-b border-borderGrey lg:border-0 md:hover:bg-gradient-to-b md:hover:from-hoverBg transition duration-500 ease-in-out flex flex-col group">
+                                <div class="hidden md:block absolute h-full w-1 bg-htq_blue left-0 top-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out" style="z-index: 2;"></div>
+                                <div class="hidden md:block absolute w-[1px] h-full bg-copy opacity-20"></div>
+                                {% if entry.featuredImage.one() | length %}
+                                    {% set optimisedImages = entry.featuredImage.one().optimisedImage %}
+                                    <div class="hidden lg:block w-full h-64 relative">
+                                        <div class="w-full h-full inset-0 bg-htq_blue absolute bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-500 ease-in-out" style="z-index: 1;"></div>
+                                        <img class="lazyload absolute w-full h-full object-cover"
+                                             src="{{ optimisedImages.placeholderBox() }}"
+                                             data-srcset="{{ optimisedImages.srcset() }}"
+                                             sizes="100vw" />
+                                        <div class="absolute bottom-0 right-0 bg-white p-3">
+                                            <p class="text-copy mb-0 uppercase text-sm tracking-widest font-bold">{{ entry.type }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="pb-8 pt-0 px-0 md:p-8">
+                                        <h3 class="text-md text-lightGrey group-hover:text-htq_blue lg:text-htq_blue font-bold transition duration-500 ease-in-out">{{ entry.title }}</h3>
+                                    </div>
+                                    <div class="mt-auto px-8 hidden md:block">
+                                        <div class="flex flex-row space-x-4">
+                                            <p class="mb-0 text-htq_mid_teal text-xs">{{ entry.newsAndEventsCategories.one().title }}</p>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+
+    {% if partners.relatedPartners.all() | length %}
+        <section class="bg-lightBg py-8">
+            <h6 class="font-semibold text-htq_blue text-center mb-4 text-md">Our partners</h6>
+            <div class="max-w-7xl mx-auto flex flex-wrap justify-center px-8 xl:px-0">
+                {% for partner in partners.relatedPartners.all() %}
+                    <a class="w-1/2 lg:w-2/12 px-4 py-8" href="{{ partner.url }}">
+                        <img class="w-full mix-blend-multiply"
+                             src="{{ partner.siteLogo.one().url }}"
+                             />
+                    </a>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+{% endblock %}

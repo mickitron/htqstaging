@@ -1,0 +1,37 @@
+{% include 'partials/_mainNav' %}
+
+<section class="relative">
+
+    <div class="absolute h-auto xl:h-[300px] bg-htq_blue inset-0">
+        <img class="hidden xl:block absolute left-0 bottom-0 h-full" src="{{ siteUrl }}dist/img/header-watermark.svg" alt="" role="presentation">
+        <img class="hidden xl:block absolute right-0 bottom-0 h-full" src="{{ siteUrl }}dist/img/watermark-right-tier-one.svg" alt="" role="presentation">
+    </div>
+
+    <div class="max-w-7xl mx-auto relative pb-0 px-8 xl:px-0">
+
+        <div class="grid grid-cols-1 xl:grid-cols-12 gap-0 xl:gap-16">
+            <div class="w-full flex flex-col col-span-5">
+                {% include 'partials/_breadcrumbs' %}
+                <h1 class="text-white font-semibold mt-4 xl:mt-16">{{ entry.title }}</h1>
+                <div class="mt-auto">
+                    <h2 class="text-white xl:text-htq_blue text-base xl:text-md font-semibold py-8 xl:py-0">
+                        {{ entry.headerCallout }}
+                    </h2>
+                </div>
+            </div>
+            <div class="w-full flex flex-col col-span-7 lg:flex-row items-center space-x-0 lg:space-x-4 pb-16 xl:pb-0">
+                {% set headerImages = entry.headerGallery.all() %}
+                {% if headerImages | length == 1 %}
+                    <div class="w-full aspect-w-16 aspect-h-10 relative">
+                        {% set optimisedImage = headerImages[0].optimisedImage %}
+                        <img class="lazyload absolute w-full h-full object-cover"
+                             src="{{ optimisedImage.placeholderBox() }}"
+                             data-srcset="{{ optimisedImage.srcset() }}"
+                             sizes="100vw" />
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+</section>

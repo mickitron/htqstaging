@@ -1,0 +1,32 @@
+{% set cards = relatedEntries.all() %}
+{% set assets = relatedAssets.all() %}
+
+{% set colours = ['htq_blue', 'htq_teal', 'htq_mid_teal'] %}
+
+{% if heading | length %}
+    <h2 class="text-md font-semibold text-htq_blue mt-4 mb-4">{{ heading }}</h2>
+{% endif %}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {% set count = 1 %}
+        {% if cards | length %}
+            {% for card in cards %}
+                {% set count = count + 1 %}
+                <a href="{{ card.url }}" class="p-6 h-40 bg-loop_{{ loop.index }} group hover:opacity-80 transition duration-500 ease-in-out text-white">
+                    <div class="flex flex-row justify-between">
+                        <h3 class="font-semibold text-md">{{ card.title }}</h3>
+                        <img class="opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out" src="{{ siteUrl }}dist/img/right-chevron.svg" alt="{{ card.title }}">
+                    </div>
+                </a>
+            {% endfor %}
+        {% endif %}
+        {% if assets | length %}
+            {% for asset in assets %}
+                <a href="{{ asset.url }}" class="p-6 h-40 bg-loop_{{ loop.index + count }} group hover:opacity-80 transition duration-500 ease-in-out text-white">
+                    <div class="flex flex-row justify-between">
+                        <h3 class="font-semibold text-md">{{ asset.title }}</h3>
+                        <img class="opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out" src="{{ siteUrl }}dist/img/right-chevron.svg" alt="{{ asset.title }}">
+                    </div>
+                </a>
+            {% endfor %}
+        {% endif %}
+    </div>

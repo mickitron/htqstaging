@@ -1,0 +1,10 @@
+columnSuffix: tjqedave
+contentColumnType: integer
+fieldGroup: 8b7fd1bb-09d3-45b2-8a2f-6e3875ad480a # Common
+handle: formSelector
+instructions: ''
+name: 'Form selector'
+searchable: false
+translationKeyFormat: null
+translationMethod: none
+type: Solspace\Freeform\FieldTypes\FormFieldType

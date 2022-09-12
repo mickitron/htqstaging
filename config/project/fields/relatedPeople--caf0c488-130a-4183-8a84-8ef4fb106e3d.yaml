@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: e7005114-b51a-43fa-b568-36cb5018a5ba # Vizy
+handle: relatedPeople
+instructions: ''
+name: 'Related people'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: 'Add a person'
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:40a982f8-b4ab-4df8-a603-04b059ffcd96' # People
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

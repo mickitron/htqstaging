@@ -1,0 +1,31 @@
+{
+  "name": "craft",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryguy2407/HTQueensland.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryguy2407/HTQueensland/issues"
+  },
+  "homepage": "https://github.com/ryguy2407/HTQueensland#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "laravel-mix": "^6.0.49",
+    "postcss": "^8.4.16",
+    "postcss-loader": "^7.0.1",
+    "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.3.0",
+    "@tailwindcss/typography": "^0.4.1"
+  },
+  "description": ""
+}

@@ -1,0 +1,19 @@
+columnSuffix: xprnsnhr
+contentColumnType: text
+fieldGroup: a959af84-7849-4576-a353-27dff53e179a # People
+handle: institution
+instructions: 'This is optional (mainly used for researchers and theme leaders)'
+name: Institution
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

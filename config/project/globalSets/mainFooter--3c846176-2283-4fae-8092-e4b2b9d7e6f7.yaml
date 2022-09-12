@@ -1,0 +1,66 @@
+fieldLayouts:
+  943547c4-c672-4ba2-a32f-568d3e72ba13:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 284fe28d-fa4c-440e-b02e-4ffb045615a5 # Form heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 319f7cc9-8fcd-4afa-b89d-f2b5dd97b1f5 # Newsletter form
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c859d249-2e39-4e9e-95d5-bc4c680b53ac # Acknowledgement of country
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 894871b0-f1e5-474a-9998-64ff5c4b3561 # Socials heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 4b806747-6bc6-4e07-b458-06c8f3c042db # Socials
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            fieldUid: 8555c534-f063-4475-bfc8-9e2baf8294b8 # Navigation matrix
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: CONTENT
+        sortOrder: 1
+handle: mainFooter
+name: 'Main footer'
+sortOrder: 3

@@ -1,0 +1,7 @@
+{% set optimisedImage = image.one().optimisedImage %}
+{% if optimisedImage | length %}
+    <img class="lazyload w-full"
+         src="{{ optimisedImage.placeholderBox() }}"
+         data-srcset="{{ optimisedImage.srcset() }}"
+         sizes="100vw" />
+{% endif %}

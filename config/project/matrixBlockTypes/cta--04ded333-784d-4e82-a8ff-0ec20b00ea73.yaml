@@ -1,0 +1,177 @@
+field: fe1c2892-5220-4966-912a-4b036fbaf16e # CTA Section
+fieldLayouts:
+  8ce93a7d-2ea9-46fc-9286-e2e452014a01:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 34939dff-b09d-43a6-93a3-f470d8435742 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 85f41619-2a05-4c36-817f-3ddf1d0fe87b
+            warning: null
+            width: 100
+          -
+            fieldUid: d9d25cb1-9948-4304-bc2a-2e9987c83770 # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 090f9cd9-969f-4799-9afb-60726a8ddcb5
+            warning: null
+            width: 100
+          -
+            fieldUid: 8d3b3ae7-0f7f-4e98-9307-ff2c1d27afe7 # Button Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2a809ec1-3733-4c38-8a97-68b17d340381
+            warning: null
+            width: 100
+          -
+            fieldUid: 4eceadf7-260d-4715-8861-77b60b646717 # Button Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f72d329b-44ff-4462-bdf3-f0dbc4e17709
+            warning: null
+            width: 100
+          -
+            fieldUid: 879bdc0d-ad6c-4bac-b621-23e8c23d406f # Background Colour
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8760ad09-28ad-4c0a-aaa5-6add1eb0f1c5
+            warning: null
+            width: 100
+        name: Content
+        uid: 9ad6819b-d448-4214-820d-119ad1a328b0
+fields:
+  4eceadf7-260d-4715-8861-77b60b646717: # Button Link
+    columnSuffix: rztgqord
+    contentColumnType: string
+    fieldGroup: null
+    handle: buttonLink
+    instructions: null
+    name: 'Button Link'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: 1
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: null
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  8d3b3ae7-0f7f-4e98-9307-ff2c1d27afe7: # Button Text
+    columnSuffix: ffgtayoe
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonText
+    instructions: null
+    name: 'Button Text'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  879bdc0d-ad6c-4bac-b621-23e8c23d406f: # Background Colour
+    columnSuffix: wkfwzcmx
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: backgroundColour
+    instructions: null
+    name: 'Background Colour'
+    searchable: false
+    settings:
+      defaultColor: '#f79321'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  34939dff-b09d-43a6-93a3-f470d8435742: # Heading
+    columnSuffix: pquatuvb
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d9d25cb1-9948-4304-bc2a-2e9987c83770: # Text
+    columnSuffix: mtirspnk
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: cta
+name: CTA
+sortOrder: 1

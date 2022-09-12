@@ -1,0 +1,19 @@
+columnSuffix: lpdfivcw
+contentColumnType: text
+fieldGroup: 9b563bed-e98a-4151-909c-4d45e608fd39 # Globals
+handle: socialsHeading
+instructions: ''
+name: 'Socials heading'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

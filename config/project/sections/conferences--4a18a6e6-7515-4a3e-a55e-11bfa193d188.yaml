@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+handle: conferences
+name: Conferences
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  15197aeb-10d6-4ef2-a919-6bcc6108a1e8: # Health Translation Queensland
+    enabledByDefault: true
+    hasUrls: true
+    template: conferences/_entry
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: fff1ea76-c6b7-41ec-9b01-ea5bdf0a2b50
+type: structure

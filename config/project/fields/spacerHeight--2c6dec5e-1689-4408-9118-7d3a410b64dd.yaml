@@ -1,0 +1,46 @@
+columnSuffix: nxjsvhba
+contentColumnType: string
+fieldGroup: e7005114-b51a-43fa-b568-36cb5018a5ba # Vizy
+handle: spacerHeight
+instructions: ''
+name: 'Spacer height'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Small
+        -
+          - value
+          - small
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Medium
+        -
+          - value
+          - medium
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Large
+        -
+          - value
+          - large
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

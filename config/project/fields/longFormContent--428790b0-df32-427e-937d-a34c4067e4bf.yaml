@@ -1,0 +1,787 @@
+columnSuffix: uqdbvhpr
+contentColumnType: text
+fieldGroup: e7005114-b51a-43fa-b568-36cb5018a5ba # Vizy
+handle: longFormContent
+instructions: ''
+name: 'Long form content'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  columnType: text
+  configSelectionMode: manual
+  defaultTransform: ''
+  fieldData:
+    -
+      __assoc__:
+        -
+          - id
+          - group-qidlbAHtMA
+        -
+          - name
+          - 'STATIC CONTENT'
+        -
+          - blockTypes
+          -
+            -
+              __assoc__:
+                -
+                  - id
+                  - type-joO5O1EJkP
+                -
+                  - name
+                  - 'Column text'
+                -
+                  - handle
+                  - columnText
+                -
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - th-large
+                      -
+                        - value
+                        - th-large-solid
+                -
+                  - template
+                  - vizy/_columns
+                -
+                  - enabled
+                  - true
+                -
+                  - layoutUid
+                  - 4977a1ce-b473-4a1e-b94a-fc728da5a038
+                -
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - name
+                                - CONTENT
+                              -
+                                - sortOrder
+                                - 1
+                              -
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, 50c33068-f8c8-48f9-8246-56352d3d8cff] # Columns
+            -
+              __assoc__:
+                -
+                  - id
+                  - type-WevfvZt2Gs
+                -
+                  - name
+                  - 'Rich text'
+                -
+                  - handle
+                  - richText
+                -
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - 'Word File'
+                      -
+                        - value
+                        - file-word-regular
+                -
+                  - template
+                  - vizy/_richText
+                -
+                  - enabled
+                  - true
+                -
+                  - layoutUid
+                  - 1d040c5b-b7b9-4403-a74f-cd80b55d6aa1
+                -
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - name
+                                - CONTENT
+                              -
+                                - sortOrder
+                                - 1
+                              -
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, bb8e4436-1941-4410-9381-291428bac125] # Rich text
+            -
+              __assoc__:
+                -
+                  - id
+                  - type-QGRX0gF26t
+                -
+                  - name
+                  - Video
+                -
+                  - handle
+                  - video
+                -
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - 'Video File'
+                      -
+                        - value
+                        - file-video-regular
+                -
+                  - template
+                  - vizy/_video
+                -
+                  - enabled
+                  - true
+                -
+                  - layoutUid
+                  - 4a5f0f86-a381-4ef4-b716-a196e97ccca0
+                -
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - name
+                                - Content
+                              -
+                                - sortOrder
+                                - 1
+                              -
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, 5991d6a4-9e80-40b2-9493-79b69f175f28] # Video link
+            -
+              __assoc__:
+                -
+                  - id
+                  - type-M4scno2dQE
+                -
+                  - name
+                  - Image
+                -
+                  - handle
+                  - image
+                -
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - Image
+                      -
+                        - value
+                        - image-regular
+                -
+                  - template
+                  - vizy/_image
+                -
+                  - enabled
+                  - true
+                -
+                  - layoutUid
+                  - bd452e81-9ad2-4c7b-8d40-d6950380a311
+                -
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - name
+                                - CONTENT
+                              -
+                                - sortOrder
+                                - 1
+                              -
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, 74859c8b-89db-4f54-8508-0aa8bc88f4fc] # Image
+            -
+              __assoc__:
+                -
+                  - id
+                  - type-tRVfLhO04x
+                -
+                  - name
+                  - Blockquote
+                -
+                  - handle
+                  - blockquote
+                -
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - quote-left
+                      -
+                        - value
+                        - quote-left-solid
+                -
+                  - template
+                  - vizy/_blockquote
+                -
+                  - enabled
+                  - true
+                -
+                  - layoutUid
+                  - c5f89352-4af1-4faa-8768-c941ec257a9d
+                -
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - name
+                                - CONTENT
+                              -
+                                - sortOrder
+                                - 1
+                              -
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, 8688866b-379e-4a96-aa21-d0c7b7414a4e] # Text area
+            -
+              __assoc__:
+                -
+                  - id
+                  - type-HalPV3gdra
+                -
+                  - name
+                  - Spacer
+                -
+                  - handle
+                  - spacer
+                -
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - 'Alternate Arrows Vertical'
+                      -
+                        - value
+                        - arrows-alt-v-solid
+                -
+                  - template
+                  - vizy/_spacer
+                -
+                  - enabled
+                  - true
+                -
+                  - layoutUid
+                  - e4384105-04db-4e39-8b99-da212efe6fab
+                -
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - name
+                                - CONTENT
+                              -
+                                - sortOrder
+                                - 1
+                              -
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, 2c6dec5e-1689-4408-9118-7d3a410b64dd] # Spacer height
+            -
+              __assoc__:
+                -
+                  - id
+                  - type-SeakqBSfRd
+                -
+                  - name
+                  - 'Gated content'
+                -
+                  - handle
+                  - gatedContent
+                -
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - Download
+                      -
+                        - value
+                        - download-solid
+                -
+                  - template
+                  - vizy/_gatedDownload
+                -
+                  - enabled
+                  - true
+                -
+                  - layoutUid
+                  - 4a4369c3-0297-45f5-a9ad-ce0fee8e4b0d
+                -
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - name
+                                - CONTENT
+                              -
+                                - sortOrder
+                                - 1
+                              -
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, 2cd701b8-0709-4b5d-b1f8-cf074f2cb9b6] # Heading
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, 8688866b-379e-4a96-aa21-d0c7b7414a4e] # Text area
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, eb5c92dc-9532-48c5-89fd-e6aacb772c77] # Form selector
+            -
+              __assoc__:
+                -
+                  - id
+                  - type-SsYCwSpe7u
+                -
+                  - name
+                  - 'Scroll to content'
+                -
+                  - handle
+                  - scrollToContent
+                -
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - 'Angle Double Down'
+                      -
+                        - value
+                        - angle-double-down-solid
+                -
+                  - template
+                  - vizy/_scrollTo
+                -
+                  - enabled
+                  - true
+                -
+                  - layoutUid
+                  - 03fe3b33-8a1a-411b-97bb-58924917f648
+                -
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - name
+                                - CONTENT
+                              -
+                                - sortOrder
+                                - 1
+                              -
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, 2cd701b8-0709-4b5d-b1f8-cf074f2cb9b6] # Heading
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, bb8e4436-1941-4410-9381-291428bac125] # Rich text
+    -
+      __assoc__:
+        -
+          - id
+          - group-dO3PuQhnFB
+        -
+          - name
+          - 'Related content'
+        -
+          - blockTypes
+          -
+            -
+              __assoc__:
+                -
+                  - id
+                  - type-D1u3LmuFPC
+                -
+                  - name
+                  - 'Related carousel'
+                -
+                  - handle
+                  - relatedCarousel
+                -
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - Columns
+                      -
+                        - value
+                        - columns-solid
+                -
+                  - template
+                  - vizy/_relatedCarousel
+                -
+                  - enabled
+                  - true
+                -
+                  - layoutUid
+                  - 19c0776f-1ff1-45b2-8e74-2f633ab2da34
+                -
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - name
+                                - CONTENT
+                              -
+                                - sortOrder
+                                - 1
+                              -
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, 2cd701b8-0709-4b5d-b1f8-cf074f2cb9b6] # Heading
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, 71bd3d01-cdb7-4fa9-9851-a71eb6e49692] # Related entries
+            -
+              __assoc__:
+                -
+                  - id
+                  - type-gCzvvh39XO
+                -
+                  - name
+                  - 'Related colour tiles'
+                -
+                  - handle
+                  - relatedColourTiles
+                -
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - 'Grip Horizontal'
+                      -
+                        - value
+                        - grip-horizontal-solid
+                -
+                  - template
+                  - vizy/_relatedCards
+                -
+                  - enabled
+                  - true
+                -
+                  - layoutUid
+                  - 87ebf26f-dba7-43ef-abdb-b0cbd3d75da9
+                -
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - name
+                                - CONTENT
+                              -
+                                - sortOrder
+                                - 1
+                              -
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, 2cd701b8-0709-4b5d-b1f8-cf074f2cb9b6] # Heading
+                                  -
+                                    __assoc__:
+                                      - [type, craft\fieldlayoutelements\Tip]
+                                      - [tip, 'Here you can either relate a page or an asset']
+                                      - [style, tip]
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, 71bd3d01-cdb7-4fa9-9851-a71eb6e49692] # Related entries
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, 5e3e62a0-791f-48ce-8866-e3e80f6f6c9f] # Related assets
+            -
+              __assoc__:
+                -
+                  - id
+                  - type-KbCdJ7cNBV
+                -
+                  - name
+                  - 'Theme leaders'
+                -
+                  - handle
+                  - themeLeaders
+                -
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - 'User Graduate'
+                      -
+                        - value
+                        - user-graduate-solid
+                -
+                  - template
+                  - vizy/_themeLeaders
+                -
+                  - enabled
+                  - true
+                -
+                  - layoutUid
+                  - 103edafb-9fbd-45a4-8a8f-4ddbbf9494fb
+                -
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - name
+                                - CONTENT
+                              -
+                                - sortOrder
+                                - 1
+                              -
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, ba25f04a-0d5b-4984-a6ec-91cda844741a] # Theme leaders
+            -
+              __assoc__:
+                -
+                  - id
+                  - type-vFLq1cV7x6
+                -
+                  - name
+                  - 'People grid'
+                -
+                  - handle
+                  - peopleGrid
+                -
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - 'User Plus'
+                      -
+                        - value
+                        - user-plus-solid
+                -
+                  - template
+                  - vizy/_peopleGrid
+                -
+                  - enabled
+                  - true
+                -
+                  - layoutUid
+                  - 03625c29-f39e-4d21-99f0-725ac3286bed
+                -
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - name
+                                - CONTENT
+                              -
+                                - sortOrder
+                                - 1
+                              -
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, caf0c488-130a-4183-8a84-8ef4fb106e3d] # Related people
+            -
+              __assoc__:
+                -
+                  - id
+                  - type-8IkpMq0g2D
+                -
+                  - name
+                  - 'Partners grid'
+                -
+                  - handle
+                  - partnersGrid
+                -
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - Users
+                      -
+                        - value
+                        - users-solid
+                -
+                  - template
+                  - vizy/_partnersGrid
+                -
+                  - enabled
+                  - true
+                -
+                  - layoutUid
+                  - c449e551-3846-4f20-b26f-d09ddf761713
+                -
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - name
+                                - CONTENT
+                              -
+                                - sortOrder
+                                - 1
+                              -
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [fieldUid, c3e0c2a2-6a25-43ff-a26a-cd34de66c42d] # Related partners
+  manualConfig: "{\r\n    \"buttons\": [\"html\", \"formatting\", \"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\", \"bold\", \"italic\", \"underline\", \"strikethrough\", \"subscript\", \"superscript\", \"ordered-list\", \"unordered-list\", \"code-block\", \"hr\", \"highlight\", \"align-left\", \"align-right\", \"align-center\", \"align-justify\", \"clear-format\", \"line-break\", \"link\", \"image\", \"undo\", \"redo\"],\r\n    \"formatting\": [\"paragraph\", \"code\", \"blockquote\", \"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\"],\r\n    \"toolbarFixed\": true\r\n}"
+  showUnpermittedFiles: ''
+  showUnpermittedVolumes: ''
+  trimEmptyParagraphs: '1'
+  vizyConfig: ''
+translationKeyFormat: null
+translationMethod: none
+type: verbb\vizy\fields\VizyField

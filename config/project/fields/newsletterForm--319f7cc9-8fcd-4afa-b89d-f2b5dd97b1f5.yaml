@@ -1,0 +1,10 @@
+columnSuffix: snmjjsro
+contentColumnType: integer
+fieldGroup: 9b563bed-e98a-4151-909c-4d45e608fd39 # Globals
+handle: newsletterForm
+instructions: ''
+name: 'Newsletter form'
+searchable: false
+translationKeyFormat: null
+translationMethod: none
+type: Solspace\Freeform\FieldTypes\FormFieldType

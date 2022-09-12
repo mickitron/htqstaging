@@ -1,0 +1,10 @@
+{% set columns = columns.all() %}
+{% if columns | length %}
+    <div class="grid grid-cols-1 gap-8 xl:flex xl:flex-row">
+        {% for column in columns %}
+            <div class="w-full xl:w-5/12 prose p-8 pr-24 border border-htq_blue border-opacity-20 text-copy">
+                {{ column.columnText }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

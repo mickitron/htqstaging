@@ -1,0 +1,63 @@
+{% set slides = relatedEntries.all() %}
+{% if slides | length %}
+    {% if heading | length %}
+        <h3 class="text-md font-semibold text-htq_blue mb-4">{{ heading }}</h3>
+    {% endif %}
+    <div class="hidden lg:block mySwiper">
+        <div class="flex flex-row justify-end space-x-2 mb-4">
+            <img class="opacity-50 cursor-pointer hover:opacity-100 transition duration-500 ease-in-out prev" src="{{ siteUrl }}dist/img/left-arrow.svg" alt="" role="presentation">
+            <img class="opacity-50 cursor-pointer hover:opacity-100 transition duration-500 ease-in-out next" src="{{ siteUrl }}dist/img/right-arrow.svg" alt="" role="presentation">
+        </div>
+        <div class="swiper-wrapper grid grid-cols-3 relative">
+            {% for slide in slides %}
+                <a href="{{ slide.url }}" class="swiper-slide h-64 relative group">
+                    <div class="bg-white flex flex-col group-hover:bg-hoverBg transition-all duration-500 ease-in-out group-hover:bg-hoverBg transition-all duration-500 ease-in-out p-8 pr-12 border border-hoverBg text-copy relative" style="min-height: 400px;">
+                        <div class="prose flex flex-col justify-between" style="min-height: 400px;">
+                            <h1 class="text-lg text-htq_blue font-semibold">{{ slide.title }}</h1>
+                            {% if slide.seoDescription | length %}
+                                <p class="mt-auto">{{ slide.seoDescription }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="absolute p-4 bg-hoverBg group-hover:bg-htq_blue transition duration-500 ease-in-out bottom-0 right-0">
+                        <img src="{{ siteUrl }}dist/img/plus.svg" alt="{{ slide.title }}">
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 lg:hidden">
+        {% for slide in slides %}
+            <a href="{{ slide.url }}" class="h-full relative group">
+                <div class="bg-white flex flex-col group-hover:bg-hoverBg transition-all duration-500 ease-in-out group-hover:bg-hoverBg transition-all duration-500 ease-in-out p-8 pr-12 border border-htq_blue border-opacity-20 text-copy relative" style="min-height: 250px;">
+                    <div class="prose flex flex-col justify-between" style="min-height: 250px;">
+                        <h1 class="text-lg text-htq_blue font-semibold">{{ slide.title }}</h1>
+                        {% if slide.seoDescription | length %}
+                            <p class="mt-auto">{{ slide.seoDescription }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="absolute p-4 bg-hoverBg group-hover:bg-htq_blue transition duration-500 ease-in-out bottom-0 right-0">
+                    <img src="{{ siteUrl }}dist/img/plus.svg" alt="{{ slide.title }}">
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<script>
+    const swiper = new Swiper('.mySwiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        spaceBetween: 30,
+        slidesPerView: "3",
+        // Navigation arrows
+        navigation: {
+            nextEl: '.next',
+            prevEl: '.prev',
+        },
+
+    });
+</script>

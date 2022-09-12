@@ -1,0 +1,19 @@
+fieldLayouts:
+  5d5f5ef2-534f-4d7f-9b48-334b336a0996:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: c3e0c2a2-6a25-43ff-a26a-cd34de66c42d # Related partners
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: CONTENT
+        sortOrder: 1
+handle: partners
+name: Partners
+sortOrder: 2

@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: a959af84-7849-4576-a353-27dff53e179a # People
+handle: relatedThemes
+instructions: ''
+name: 'Related themes'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: 'Add a theme'
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:4d6174ad-64f6-4358-ad88-8baf73b00755' # Pages
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

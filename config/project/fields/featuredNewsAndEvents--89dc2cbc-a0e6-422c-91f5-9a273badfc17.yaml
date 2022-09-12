@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: d540c85c-a227-49d4-ab70-f39ba6d142ce # Home
+handle: featuredNewsAndEvents
+instructions: ''
+name: 'Featured news and events'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: 'Add a news or event entry'
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:d1d4b835-661c-4f44-9a4a-a59ef4f10522' # News and events
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

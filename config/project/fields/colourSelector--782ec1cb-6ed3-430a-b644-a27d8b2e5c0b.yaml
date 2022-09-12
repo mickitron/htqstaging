@@ -1,0 +1,145 @@
+columnSuffix: cvybdwis
+contentColumnType: string
+fieldGroup: 8b7fd1bb-09d3-45b2-8a2f-6e3875ad480a # Common
+handle: colourSelector
+instructions: ''
+name: 'Colour selector'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Row 1A'
+        -
+          - value
+          - bg-row_1_a
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Row 1B'
+        -
+          - value
+          - bg-row_1_b
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Row 1C'
+        -
+          - value
+          - bg-row_1_c
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Row 2A'
+        -
+          - value
+          - bg-row_2_a
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Row 2B'
+        -
+          - value
+          - bg-row_2_b
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Row 2C'
+        -
+          - value
+          - bg-row_2_c
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Row 3A'
+        -
+          - value
+          - bg-row_3_a
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Row 3B'
+        -
+          - value
+          - bg-row_3_b
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Row 3C'
+        -
+          - value
+          - bg-row_3_c
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Row 4A'
+        -
+          - value
+          - bg-row_4_a
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Row 4B'
+        -
+          - value
+          - bg-row_4_b
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Row 4C'
+        -
+          - value
+          - bg-row_4_c
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

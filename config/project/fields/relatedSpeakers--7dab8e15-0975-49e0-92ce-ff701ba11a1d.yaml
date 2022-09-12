@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: e7005114-b51a-43fa-b568-36cb5018a5ba # Vizy
+handle: relatedSpeakers
+instructions: null
+name: 'Related Speakers'
+searchable: false
+settings:
+  allowSelfRelations: false
+  localizeRelations: false
+  maxRelations: null
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: 'Add a speaker'
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'section:046979bd-ffd2-482c-9a03-7709fe409eb7' # Speakers
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

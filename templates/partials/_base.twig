@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ siteUrl }}dist/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ siteUrl }}dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ siteUrl }}dist/favicon/favicon-16x16.png">
+    <link rel="manifest" href="{{ siteUrl }}dist/favicon/site.webmanifest">
+    <link rel="mask-icon" href="{{ siteUrl }}dist/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="{{ siteUrl }}dist/js/lazysizes.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{{ siteUrl }}dist/css/app.css">
+</head>
+<body class="font-sans font-antialiased" style="overflow-x: hidden;">
+
+{{ adminbar() }}
+
+<section class="bg-search_bg py-2 px-4 lg:px-12 lg:py-12 w-full searchForm" style="display: none;">
+    <div class="max-w-7xl mx-auto">
+        <div class="w-full lg:w-3/4 mx-auto">
+            <form class="flex flex-row justify-center" action="{{ url('search/results') }}">
+                <input class="bg-htq_blue w-full lg:w-1/2 p-2 text-white placeholder-white" type="search" name="q" aria-label="Search" placeholder="Search">
+                <button class="bg-htq_blue px-2" type="submit"><img src="{{ siteUrl }}dist/img/search-icon.svg" alt="" role="presentation"></button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white fixed w-full h-screen overflow-y-scroll menuOverlay" style="z-index: 1000;display: none;">
+    <div class="max-w-7xl mx-auto relative pt-8 xl:pt-16 pb-8 px-8 xl:px-0">
+        <div class="flex flex-row justify-between items-center">
+            <img class="w-7/12 lg:w-[278px]" src="{{ siteUrl }}dist/img/logo-blue.svg" alt="Health Translation Queensland">
+            <img class="closeMenu cursor-pointer" src="{{ siteUrl }}dist/img/close.svg" alt="" role="presentation">
+        </div>
+        {% set nodes = craft.navigation.nodes('mainNavigation').all() %}
+        <ul class="flex flex-col lg:flex-row space-x-0 lg:space-x-8 pt-16 menuOverlay">
+            {% nav node in nodes %}
+                <li class="relative group mb-8 {% if node.active %}text-htq_teal{% endif %}">
+                    {{ node.link }}
+                    {% ifchildren %}
+
+                        <ul class="group-hover:block mt-4 lg:mt-8" style="z-index: 2;">
+                            {% children %}
+                        </ul>
+                    {% endifchildren %}
+                </li>
+            {% endnav %}
+        </ul>
+    </div>
+</section>
+
+<div class="hidden xl:block socials flex flex-col fixed right-0 top-48" style="z-index: 1000;">
+    {% set socials = mainFooter.socials.all() %}
+    {% if socials | length %}
+        {% for social in socials %}
+            <a target="_blank" class="mb-[2px] block" href="{{ social.vendorUrl }}">
+                {% if social.vendor == 'facebook' %}
+                    <img src="{{ siteUrl }}dist/img/fb-side-icon.svg" alt="Facebook">
+                {% endif %}
+                {% if social.vendor == 'twitter' %}
+                    <img src="{{ siteUrl }}dist/img/twitter-side-icon.svg" alt="Twitter">
+                {% endif %}
+                {% if social.vendor == 'linkedin' %}
+                    <img src="{{ siteUrl }}dist/img/linkedin-side-icon.svg" alt="Linkedin">
+                {% endif %}
+            </a>
+        {% endfor %}
+    {% endif %}
+</div>
+
+{% block content %}{% endblock %}
+
+{% include 'partials/footer' %}
+
+{% block scripts %}{% endblock %}
+
+<script>
+    jQuery(document).ready(function(){
+        jQuery('.searchTrigger').on('click', function(){
+            jQuery('.searchForm').slideToggle();
+        });
+
+        jQuery('.openMenu').on('click', function(){
+            jQuery('.menuOverlay').fadeIn();
+        });
+
+        jQuery('.closeMenu').on('click', function(){
+            jQuery('.menuOverlay').fadeOut();
+        });
+
+        jQuery('a.openGatedForm').on('click', function(e) {
+            e.preventDefault();
+            jQuery(this).next('.gatedForm').slideToggle();
+        });
+    })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</body>
+</html>

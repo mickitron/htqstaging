@@ -1,0 +1,165 @@
+field: ce3930e0-c644-4574-be77-785ee7c5d715 # Conference Countdown
+fieldLayouts:
+  9be2fcad-ece1-47ee-b108-890f15a91247:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f9b2af02-9223-41bf-a2a7-4f14005212d3 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3511824d-c452-4f48-b315-bc6e1050fcd9
+            warning: null
+            width: 100
+          -
+            fieldUid: 13bdd01d-2af5-4020-a47e-86ee64cff67f # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 093b0338-a75b-4393-9ac1-0ffcdd8183bb
+            warning: null
+            width: 100
+          -
+            fieldUid: faa7fe4a-8821-4f6b-aed6-3aca8fae4a4c # Register Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c5bc17d3-7416-4ccc-a325-1fd994e91b31
+            warning: null
+            width: 100
+          -
+            fieldUid: aa265a40-fc93-4964-b034-a201eb148e90 # RegisterLink
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f6e75366-c20d-40e7-a475-c1eba69bdafa
+            warning: null
+            width: 100
+          -
+            fieldUid: 518b6378-b5f2-49a5-b495-138dbe97b9bf # Time
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1fd68b2f-755a-4a1a-9b59-b7c24d49ab39
+            warning: null
+            width: 100
+        name: Content
+        uid: 99ef936a-4925-4a4a-9be9-4a36a6262671
+fields:
+  13bdd01d-2af5-4020-a47e-86ee64cff67f: # Text
+    columnSuffix: mvpvtwvc
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  518b6378-b5f2-49a5-b495-138dbe97b9bf: # Time
+    columnSuffix: ccbbfmps
+    contentColumnType:
+      - 'date:datetime'
+      - 'tz:string'
+    fieldGroup: null
+    handle: time
+    instructions: null
+    name: Time
+    searchable: false
+    settings:
+      max: null
+      min: null
+      minuteIncrement: 5
+      showDate: true
+      showTime: true
+      showTimeZone: true
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  aa265a40-fc93-4964-b034-a201eb148e90: # RegisterLink
+    columnSuffix: zvznaoph
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: registerLink
+    instructions: null
+    name: RegisterLink
+    searchable: false
+    settings:
+      maxLength: 255
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  f9b2af02-9223-41bf-a2a7-4f14005212d3: # Heading
+    columnSuffix: edsiajwr
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  faa7fe4a-8821-4f6b-aed6-3aca8fae4a4c: # Register Text
+    columnSuffix: nrnpjubq
+    contentColumnType: text
+    fieldGroup: null
+    handle: registerText
+    instructions: null
+    name: 'Register Text'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: conferenceCountdown
+name: 'Conference Countdown'
+sortOrder: 1

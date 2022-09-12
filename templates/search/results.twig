@@ -1,0 +1,30 @@
+{% extends 'partials/_base.twig' %}
+
+{% block content %}
+
+    {% include 'pages/partials/_tierThreeHeader.twig' %}
+
+    <section>
+        <div class="max-w-7xl mx-auto pt-16 font-light px-8 xl:px-0">
+            {% set searchQuery = craft.app.request.getParam('q') %}
+            {% set entries = craft.entries()
+                .search(searchQuery)
+                .orderBy('score')
+                .all() %}
+
+            {% if entries|length %}
+                <h3 class="text-htq_blue text-lg font-bold mt-8 mb-4">Search results</h3>
+                <div class="grid grid-cols-4 gap-x-4 gap-y-8 pb-8">
+                    {% for entry in entries %}
+                        <a class="p-8 border-l-2 border-copy border-opacity-20 h-full hover:border-opacity-100 hover:border-htq_blue relative hover:bg-gradient-to-b from-lightBg transition-all duration-500 ease-in-out" href="{{ entry.url }}">
+                            <h4 class="text-htq_blue font-bold mb-8">{{ entry.title }}</h4>
+                            <p>{{ entry.seoDescription | chop(limit=150, unit='c')  }}...</p>
+                            <p class="mt-auto absolute bottom-0 text-htq_blue font-bold">Read more</p>
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </section>
+
+{% endblock %}

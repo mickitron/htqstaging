@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: d540c85c-a227-49d4-ab70-f39ba6d142ce # Home
+handle: slideshow
+instructions: ''
+name: Slideshow
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_slideshow}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

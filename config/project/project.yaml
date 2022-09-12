@@ -1,0 +1,417 @@
+dateModified: 1662937705
+email:
+  fromEmail: digital@newwordorder.com.au
+  fromName: 'Health Translation Queensland'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  uploads:
+    hasUrls: true
+    name: Uploads
+    settings:
+      bucket: nwo
+      contentDisposition: ''
+      endpoint: 'https://nyc3.digitaloceanspaces.com'
+      expires: '3 months'
+      keyId: $DO_PUBLIC
+      region: ny3
+      secret: $DO_SECRET
+      subfolder: htqueensland
+    type: vaersaagod\dospaces\Fs
+    url: $DO_EDGE
+meta:
+  __names__:
+    0bd44ba4-9388-4a00-8cd3-106bb21453ba: Institution # Institution
+    0c4620c5-4336-41e4-922d-dbf4ba93fee8: 'News and events categories' # News and events categories
+    0df00065-1589-4f5f-9787-ccb7e6ec178f: 'Menu select' # Menu select
+    0ff2304f-1e53-4519-97a2-8d79e64dbccc: Contact # Contact
+    1eb93128-c9cf-4c8b-b069-c4650db9130b: 'Alert link' # Alert link
+    2c6dec5e-1689-4408-9118-7d3a410b64dd: 'Spacer height' # Spacer height
+    2cd701b8-0709-4b5d-b1f8-cf074f2cb9b6: Heading # Heading
+    2eaab538-84d4-4454-9a79-814967319d20: Testimonials # Testimonials
+    3bb510ba-366a-486f-91d6-127a306f4f57: 'Project categories' # Project categories
+    3bc83ee2-a5fd-4084-8ed4-0e1b157fba2b: 'Two Column Image Right' # Two Column Image Right
+    03bd2ca4-ee2d-4f75-af76-7db070cfd301: 'News and events' # News and events
+    3c846176-2283-4fae-8092-e4b2b9d7e6f7: 'Main footer' # Main footer
+    4a3f57d5-9498-4e43-b552-d9d3a0045fa1: Projects # Projects
+    4a18a6e6-7515-4a3e-a55e-11bfa193d188: Conferences # Conferences
+    4b034653-d9ad-4dda-8e5d-44b95d83f4c4: 'Accordion title' # Accordion title
+    4b806747-6bc6-4e07-b458-06c8f3c042db: Socials # Socials
+    4c25a762-6203-43cd-a062-2e7d99a11426: 'External link' # External link
+    4c2717c1-3368-4056-8059-e47b9b8bd9fd: Home # Home
+    4d6174ad-64f6-4358-ad88-8baf73b00755: Pages # Pages
+    04ded333-784d-4e82-a8ff-0ec20b00ea73: CTA # CTA
+    4e2c08fc-0231-4274-b3cb-4e217c1119ec: 'SEO title' # SEO title
+    4eceadf7-260d-4715-8861-77b60b646717: 'Button Link' # Button Link
+    5baa2363-959c-4b5c-81f2-9eb1407fc61c: 'MRFF RART Projects' # MRFF RART Projects
+    5c379652-0f3c-45bd-a1ff-b5b3ec3d4ade: Slideshow # Slideshow
+    5dd7511f-218d-42c6-915f-3c93cf8778a4: Projects # Projects
+    5e3e62a0-791f-48ce-8866-e3e80f6f6c9f: 'Related assets' # Related assets
+    5f1e759d-4336-4202-b41b-f399c2cb0682: FAQ # FAQ
+    6ffaa276-c7d1-46e1-8767-505d06579675: Heading # Heading
+    7ab76f19-2283-4ed7-aef7-f3114f86a4b6: 'Contact details' # Contact details
+    7cadd0f5-3571-466a-b08d-5866c2ab6912: 'Conference Program' # Conference Program
+    7d88a7f2-afba-4aaf-8394-f2750787b9c6: 'Tier One' # Tier One
+    7d473205-9bd8-4f31-9726-930556d515c2: Email # Email
+    7dab8e15-0975-49e0-92ce-ff701ba11a1d: 'Related Speakers' # Related Speakers
+    7e7a9ccd-98aa-494e-a3cb-51f94a2198f8: 'Contact form' # Contact form
+    7fc2c416-28fb-4482-bda1-be409cc6abc1: Partners # Partners
+    7fe25fe1-8c72-488f-8610-319251f2a8f6: Text # Text
+    8b7fd1bb-09d3-45b2-8a2f-6e3875ad480a: Common # Common
+    8b1039c6-ee17-4e39-bcc5-148ae392213e: Default # Default
+    8bd1ce00-e80f-4e08-b10d-e09c1ea0b512: Heading # Heading
+    8d3b3ae7-0f7f-4e98-9307-ff2c1d27afe7: 'Button Text' # Button Text
+    8d39f5fb-c63c-4a46-b9df-741619ccaa3d: 'Conference Sponsors' # Conference Sponsors
+    8da3f8ba-246f-4482-b2c7-7fe5e9e6e3fe: Heading # Heading
+    8ec4adb1-d840-4014-9030-211c4ec9348d: Heading # Heading
+    9b563bed-e98a-4151-909c-4d45e608fd39: Globals # Globals
+    09b65018-e2c6-4ae8-9c17-903e66875182: Partners # Partners
+    9f9c4a7b-a1ee-4b12-87bb-e35a1d3c0ac9: Quicklinks # Quicklinks
+    11b137a3-153c-4d01-ac56-3e0b5c61db75: Twitter # Twitter
+    11cfc561-52bc-472f-901c-e106f0efea9a: 'Conference CTA' # Conference CTA
+    13bdd01d-2af5-4020-a47e-86ee64cff67f: Text # Text
+    020f76bb-8b61-4ba1-b680-c082caae8790: Heading # Heading
+    21e07040-a307-4066-9c1b-2db82c2b60ec: Default # Default
+    24aa8451-1e7a-4935-a09a-00bc37934d22: Accordion # Accordion
+    32e7c8a9-ff99-4c82-b135-fe76aee671b3: 'Column text' # Column text
+    33c0f42a-d414-43c7-b7fc-d2077272f51e: Linkedin # Linkedin
+    36b7816a-aa32-4c14-aadf-9035ee4b37c6: Link # Link
+    40a982f8-b4ab-4df8-a603-04b059ffcd96: People # People
+    40ddbd64-9eee-4175-8f43-4ffb65aabb31: 'Register Text' # Register Text
+    42a60ade-7a1a-4a10-8313-d93e706ebeb4: Phone # Phone
+    047ebd95-0998-4c6f-9108-46b7d507dec6: Vendor # Vendor
+    50c33068-f8c8-48f9-8246-56352d3d8cff: Columns # Columns
+    71bd3d01-cdb7-4fa9-9851-a71eb6e49692: 'Related entries' # Related entries
+    75a9d838-680c-4577-b521-728bef8b7796: 'Program Title' # Program Title
+    078d14b6-6aa7-4bac-a8a8-b5edb105f8fb: 'SEO Image' # SEO Image
+    81f1e7d8-d696-4cd0-a1a1-a6dca15dbbeb: Text # Text
+    85d88cab-4122-4b40-960e-962ee0511bdf: 'Conference Countdown' # Conference Countdown
+    86ab1437-695b-4f84-9b37-479c67a77d1b: 'SEO image description' # SEO image description
+    89dc2cbc-a0e6-422c-91f5-9a273badfc17: 'Featured news and events' # Featured news and events
+    95e24d75-5bb4-46f3-84d0-54529e12e435: URL # URL
+    104f5156-0a9b-42c3-bc79-8e35a1879bae: Institution # Institution
+    195cd33f-850c-4b23-a7b6-c2c12bbd78a5: 'Global email' # Global email
+    255dd24c-e868-47e8-ad0d-46a8621049e6: 'Related content' # Related content
+    267ae757-f3a8-4ca4-a872-a4aa57cba427: 'Featured pages' # Featured pages
+    268f7e67-9aa8-48a6-8328-b6318093a95a: Text # Text
+    284fe28d-fa4c-440e-b02e-4ffb045615a5: 'Form heading' # Form heading
+    319f7cc9-8fcd-4afa-b89d-f2b5dd97b1f5: 'Newsletter form' # Newsletter form
+    365ec52a-7c5e-429d-988b-524ddd0a7432: Photo # Photo
+    378eb557-1c15-40a0-837d-4e9132627acb: 'Text area' # Text area
+    410c8072-591e-4e45-95b5-6f3597d1d973: 'Theme leader' # Theme leader
+    462ed050-f7b1-4854-bcb3-f0f0bca35844: 'Partner description' # Partner description
+    492b0bb4-2091-4398-a210-564b3c12ae20: 'Global address' # Global address
+    498bd139-762d-494e-a10f-938061c9a610: Day # Day
+    518b6378-b5f2-49a5-b495-138dbe97b9bf: Time # Time
+    782ec1cb-6ed3-430a-b644-a27d8b2e5c0b: 'Colour selector' # Colour selector
+    823bd892-9bda-4ef9-bed3-6aa33cc14a7d: 'Conference Contact' # Conference Contact
+    879bdc0d-ad6c-4bac-b621-23e8c23d406f: 'Background Colour' # Background Colour
+    986ee963-df96-47b4-abd9-1bd0db7df73b: 'Contact form' # Contact form
+    01180c3b-26c6-4561-90eb-103c884a111a: Subheading # Subheading
+    3972c266-b3c4-4bea-81c1-8cddc3d20fd3: 'News and events index' # News and events index
+    4961c36c-5074-4739-861f-d295581c5982: 'Text area' # Text area
+    4994ea9b-7283-4407-b0b0-af631c62a794: Themes # Themes
+    5746a380-5df9-4064-a7b1-52c53a50ddb4: 'Download File' # Download File
+    5991d6a4-9e80-40b2-9493-79b69f175f28: 'Video link' # Video link
+    08161f59-122b-4099-a873-b61274914fec: 'WP content import' # WP content import
+    8478ebda-b3a0-435c-9aa5-918851f9e5d1: 'Main navigation' # Main navigation
+    8555c534-f063-4475-bfc8-9e2baf8294b8: 'Navigation matrix' # Navigation matrix
+    09257c28-9e7d-4f43-b8f7-597426429de9: 'SEO Keywords' # SEO Keywords
+    9775aa55-209d-4516-9f3d-6f489cf674af: 'Header callout' # Header callout
+    9825f43e-31cf-47e3-a591-29bd7c6b48de: 'Theme leaders' # Theme leaders
+    15197aeb-10d6-4ef2-a919-6bcc6108a1e8: 'Health Translation Queensland' # Health Translation Queensland
+    28098bdb-54c4-4865-910b-c2724e85a55e: 'FAQ Title' # FAQ Title
+    29322e41-1b3a-46dd-bdb8-a05bc8470173: 'Tier Two' # Tier Two
+    34939dff-b09d-43a6-93a3-f470d8435742: Heading # Heading
+    41654a2d-46dd-4eb5-91d6-8a793c4044d5: Socials # Socials
+    046979bd-ffd2-482c-9a03-7709fe409eb7: Speakers # Speakers
+    74322e32-f257-4ff6-9642-355a91776e25: Name # Name
+    74859c8b-89db-4f54-8508-0aa8bc88f4fc: Image # Image
+    81644cb1-aa71-4340-96be-355dd64c3090: 'Download File' # Download File
+    98271e35-5940-4668-bb24-23324d77dbb6: Heading # Heading
+    366669c1-fe40-4067-b625-311d2125278b: Uploads # Uploads
+    428790b0-df32-427e-937d-a34c4067e4bf: 'Long form content' # Long form content
+    440253b2-a307-4268-995e-fe99e2d25914: Events # Events
+    512691ad-f6af-46e1-8e1b-364484b5f331: 'Button text' # Button text
+    894871b0-f1e5-474a-9998-64ff5c4b3561: 'Socials heading' # Socials heading
+    8688866b-379e-4a96-aa21-d0c7b7414a4e: 'Text area' # Text area
+    8707648a-9998-4457-9b18-fc3848d3e0aa: 'Position and qualifications' # Position and qualifications
+    58412947-31c1-478b-a9d5-f2d18afcfe12: 'Project categories' # Project categories
+    69634455-80bf-41a0-8d99-74ef052d3271: Logo # Logo
+    91123424-c3cb-4ee8-a69e-f14594686e9b: 'Tier Three' # Tier Three
+    a6acac9a-7cd8-453c-8f51-fb39bfbd6660: News # News
+    a6f8b723-f1e4-4401-b237-c77ae88ef011: 'Contact Form' # Contact Form
+    a6f9df7e-a662-4ac5-92eb-0b4705fa3c9f: Image # Image
+    a14acc10-685c-4369-85e1-83729f714b18: Accordion # Accordion
+    a25aa1b3-7526-4939-84dd-55d48a49e19f: 'Conference Date' # Conference Date
+    a88b9a83-2a18-44be-9058-bdb8fea6048a: Heading # Heading
+    a959af84-7849-4576-a353-27dff53e179a: People # People
+    aa265a40-fc93-4964-b034-a201eb148e90: RegisterLink # RegisterLink
+    ab5c4bd4-b866-4e61-9578-4cde3f5f90a5: Text # Text
+    acb4094f-5cda-44cb-a41c-3304d201edff: Address # Address
+    acd7d705-cca4-42ee-bf7a-0cc8c52c0ab6: Sponsor # Sponsor
+    ad3e8376-41ac-4e32-9bfa-edc9ea34ee60: 'Testimonial Title' # Testimonial Title
+    aecf9f3f-ebb7-4d2e-9005-c7b0960d575a: 'Conference Program' # Conference Program
+    b2ae9197-e443-43b0-aab9-29240b987920: Image # Image
+    b8b3bb80-a6b2-49f9-974b-138441e1ab1d: 'Global phone number' # Global phone number
+    b97ad6f6-eecd-44f5-908b-eadfddd3fdca: 'SEO Description' # SEO Description
+    b9589de4-ac73-409a-af87-76d5986209fb: 'Register Link' # Register Link
+    ba049758-064b-46cd-86b2-6d115b97e32f: 'Conference Venue' # Conference Venue
+    ba25f04a-0d5b-4984-a6ec-91cda844741a: 'Theme leaders' # Theme leaders
+    bb8e4436-1941-4410-9381-291428bac125: 'Rich text' # Rich text
+    bb112ccb-9b0f-41f4-89bf-516a16f1f957: Date # Date
+    bbda71cf-a2c9-47cc-a0d8-9d8b960e6260: Conference # Conference
+    bcfbfe82-e4e2-4465-9f1c-4779688c59ef: Slide # Slide
+    bd9e3392-b3c6-481a-a477-5f08fe855bc7: Conference # Conference
+    bdd1a5ec-d3c1-456a-a6d8-b1043d7a1a17: Image # Image
+    bed35530-e001-400b-a49a-a26b982b32a3: Biography # Biography
+    bf2faf2e-327f-49e4-97b2-91a8279e2bc4: 'Bottom footer' # Bottom footer
+    c0a5fde5-569c-40a2-ad05-caa51cb08160: 'Board and staff' # Board and staff
+    c3e0c2a2-6a25-43ff-a26a-cd34de66c42d: 'Related partners' # Related partners
+    c8ee1d81-185c-4761-9c3c-35ec4686bbf5: 'Download Text' # Download Text
+    c859d249-2e39-4e9e-95d5-bc4c680b53ac: 'Acknowledgement of country' # Acknowledgement of country
+    c5712546-9e89-487b-b85f-99d589e91dcb: 'Conference CTA' # Conference CTA
+    ca97e79f-06fb-41a4-ab37-b97108c94af8: Partners # Partners
+    caf0c488-130a-4183-8a84-8ef4fb106e3d: 'Related people' # Related people
+    cb5371c4-c218-4bec-a7f5-5be4075e07cc: 'Tier two full width' # Tier two full width
+    cc3d7aa8-3629-47fb-b051-1d59796c54e4: 'External link' # External link
+    ce3930e0-c644-4574-be77-785ee7c5d715: 'Conference Countdown' # Conference Countdown
+    cf6530e8-6780-44fc-8d47-824a74e32868: 'External link' # External link
+    cfd7924a-3d79-4332-ac42-d3fe36917f06: 'Featured image' # Featured image
+    d1d4b835-661c-4f44-9a4a-a59ef4f10522: 'News and events' # News and events
+    d5af7bef-edeb-49d6-838b-e8d085b67342: Default # Default
+    d6e28454-c877-49a8-99a5-ea996c9de804: 'Related page' # Related page
+    d8a753a5-fe72-4f3b-abeb-4d14b3874d85: 'Sponsors Title' # Sponsors Title
+    d8dd41e2-5a43-4dda-8694-b09fb37dfb60: Home # Home
+    d9d25cb1-9948-4304-bc2a-2e9987c83770: Text # Text
+    d37d540f-6af9-4e6a-8237-101fa610a3b6: Answer # Answer
+    d78e0e99-5944-4cb0-ab53-2e0d19915668: 'Header gallery' # Header gallery
+    d540c85c-a227-49d4-ab70-f39ba6d142ce: Home # Home
+    dc0f4007-db9e-4af3-ae58-f2e0bf6a4a86: SEO # SEO
+    dd699421-ac61-45ea-8a24-71c9e064bf7c: Email # Email
+    dea8b0e0-13fa-4259-8242-58d0a6c33979: Conference # Conference
+    dff0d453-0018-47a0-964e-8401d1d3800b: 'Related themes' # Related themes
+    e0a66bba-47d4-44ae-b699-f47a240cee6a: Icon # Icon
+    e0b09619-c45c-466b-a34b-ad4912e3257a: 'Download Text' # Download Text
+    e3a29992-aa74-4993-a8ae-768a34433977: 'Health Translation Queensland' # Health Translation Queensland
+    e5b1dd21-c0a3-4b40-85eb-e291eeec85e2: 'Two Column Image Right' # Two Column Image Right
+    e9f1a3ab-2f8c-481f-8879-f47c563df9d2: Time # Time
+    e18a121f-68bb-4064-995e-186144e148f0: 'Conference Program Title' # Conference Program Title
+    e7005114-b51a-43fa-b568-36cb5018a5ba: Vizy # Vizy
+    eac6f1bb-e585-459e-a976-5082ed8d0b70: 'Global SEO' # Global SEO
+    eb5c92dc-9532-48c5-89fd-e6aacb772c77: 'Form selector' # Form selector
+    eb5809f1-bf2b-497f-bfa2-3211b5abeabd: Testimonial # Testimonial
+    ec57ae84-8a92-476d-a6cc-fd49efd4c101: Form # Form
+    f0ba477d-ed41-4298-9c4b-dd9cd8f8bd8e: 'Partner URL' # Partner URL
+    f1df5233-847b-430b-9043-460f7bdc7263: Form # Form
+    f2f6c945-11ce-48df-a626-dbfb52f874b3: Contact # Contact
+    f3c6b5af-36cf-45a9-a298-2b5164cc74d1: Heading # Heading
+    f9b2af02-9223-41bf-a2a7-4f14005212d3: Heading # Heading
+    f54c7963-5312-4d09-b553-420333e03e82: 'Optimised Image' # Optimised Image
+    f616ef20-5ffe-4f59-a6f2-e9d8a7bfebc4: Question # Question
+    f755b769-35bf-4e52-81f1-c1855014c74c: Column # Column
+    f3920e1a-71c9-4e1c-9f39-56a259f922cf: 'News and events' # News and events
+    f6546fbd-2524-48d5-9035-da04960c7830: 'Link text' # Link text
+    f738066a-9c97-42e0-af8a-e168bd6131db: Text # Text
+    f9589390-5a8f-4f46-8a72-16be870d4d07: Partners # Partners
+    fa1f53ca-c019-43af-a59b-b1019c21de93: Heading # Heading
+    faa7fe4a-8821-4f6b-aed6-3aca8fae4a4c: 'Register Text' # Register Text
+    fca7f9aa-63e5-4e82-9a21-711f6653f18c: Image # Image
+    fe1c2892-5220-4966-912a-4b036fbaf16e: 'CTA Section' # CTA Section
+    fe69e1d1-a32c-43b1-a787-d3813e3abf4d: 'Site logo' # Site logo
+    fe8184cc-ecc8-4f0c-9b55-533379a46965: 'FAQ Accordion' # FAQ Accordion
+    ff917207-a133-4c01-a8a8-d9e7bb468dfe: Menu # Menu
+    fff8ded0-37e8-483f-957f-aec195a72966: 'Related page' # Related page
+plugins:
+  admin-bar:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.0
+  blitz:
+    edition: standard
+    enabled: true
+    licenseKey: 1C82NKG0J0P0RZ9XWJW2528P
+    schemaVersion: 4.1.2
+    settings:
+      cacheGeneratorType: putyourlightson\blitz\drivers\generators\HttpGenerator
+      refreshMode: 3
+  dospaces:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 4.4.0
+  freeform:
+    edition: pro
+    enabled: true
+    licenseKey: QWA61M8BE6REMITYA3FXOZ5J
+    schemaVersion: 4.2.2
+    settings:
+      ajaxByDefault: true
+      alertNotificationRecipients: null
+      autoScroll: true
+      autoScrollToErrors: true
+      badgeType: all
+      blockedEmails: null
+      blockedEmailsError: 'Invalid Email Address'
+      blockedIpAddresses: null
+      blockedKeywords: null
+      blockedKeywordsError: 'Invalid Entry Data'
+      bypassSpamCheckOnLoggedInUsers: false
+      clientDigestFrequency: 1
+      clientDigestRecipients: null
+      customErrorMessage: null
+      customHoneypotName: null
+      defaultTemplates: true
+      defaultView: dashboard
+      digestFrequency: 1
+      digestOnlyOnProduction: false
+      digestRecipients: null
+      displayFeed: true
+      emailTemplateDirectory: null
+      exportLabels: false
+      fieldDisplayOrder: name
+      fillWithGet: false
+      footerScripts: false
+      formFieldShowOnlyAllowedForms: false
+      formSubmitDisable: true
+      formSubmitExpiration: null
+      formTemplateDirectory: null
+      formattingTemplate: flexbox.twig
+      freeformHoneypot: true
+      freeformHoneypotEnhancement: false
+      hideBannerDemo: false
+      hideBannerOldFreeform: false
+      minimumSubmitTime: null
+      pluginName: null
+      purgableSpamAgeInDays: null
+      purgableSubmissionAgeInDays: null
+      purgableUnfinalizedAssetAgeInMinutes: 180
+      recaptchaBehaviour: display_error
+      recaptchaEnabled: '1'
+      recaptchaErrorMessage: 'Please verify that you are not a robot.'
+      recaptchaKey: $RECAPTCHA_SITE_KEY
+      recaptchaLazyLoad: ''
+      recaptchaMinScore: '0.5'
+      recaptchaSecret: $RECAPTCHA_SECRET_KEY
+      recaptchaSize: normal
+      recaptchaTheme: light
+      recaptchaType: v3
+      rememberPageSubmitOrder: true
+      removeNewlines: false
+      renderFormHtmlInCpViews: true
+      salesforce_client_id: null
+      salesforce_client_secret: null
+      salesforce_password: null
+      salesforce_username: null
+      saveFormSessionLimit: 10
+      saveFormTtl: 30
+      scriptInsertLocation: footer
+      scriptInsertType: pointers
+      sessionContext: payload
+      sessionContextCount: 100
+      sessionContextSecret: ''
+      sessionContextTimeToLiveMinutes: 180
+      sessionEntryMaxCount: 50
+      sessionEntryTTL: 10800
+      showErrorsForBlockedEmails: false
+      showErrorsForBlockedKeywords: false
+      showTutorial: false
+      spamFolderEnabled: true
+      spamProtectionBehaviour: simulate_success
+      submissionThrottlingCount: null
+      submissionThrottlingTimeFrame: null
+      successTemplateDirectory: null
+      twigInHtml: true
+      twigInHtmlIsolatedMode: true
+      updateSearchIndexes: true
+  image-optimize:
+    edition: standard
+    enabled: true
+    licenseKey: 37R10X0QUMFNTZ8FDZLZ6O1A
+    schemaVersion: 1.0.0
+    settings:
+      allowUpScaledImageVariants: false
+      assetVolumeSubFolders: true
+      autoSharpenScaledImages: true
+      capSilhouetteSvgSize: true
+      createColorPalette: true
+      createPlaceholderSilhouettes: false
+      imageTransformTypeSettings:
+        __assoc__:
+          -
+            - nystudio107\imageoptimizeimgix\imagetransforms\ImgixImageTransform
+            -
+              __assoc__:
+                -
+                  - domain
+                  - ''
+                -
+                  - apiKey
+                  - ''
+                -
+                  - securityToken
+                  - ''
+                -
+                  - unsharpMask
+                  - '20'
+          -
+            - nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - ''
+          -
+            - nystudio107\imageoptimizethumbor\imagetransforms\ThumborImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - ''
+                -
+                  - securityKey
+                  - ''
+      lowerQualityRetinaImageVariants: true
+      sharpenScaledImagePercentage: 50
+      transformClass: nystudio107\imageoptimize\imagetransforms\CraftImageTransform
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: 4G76KD9JD57M7I56EYNXOHFD
+    schemaVersion: 2.0.2
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: 8T0L7S6VATXYRFYZ52KT1831
+    schemaVersion: 3.0.11
+  vizy:
+    edition: standard
+    enabled: true
+    licenseKey: R5BRY9P3K0AIYSVMQ38V2NRM
+    schemaVersion: 0.9.0
+    settings:
+      iconsPath: '@webroot/icons/'
+  wordsmith:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0.0
+system:
+  edition: pro
+  live: true
+  name: 'Health Translation Queensland'
+  retryDuration: null
+  schemaVersion: 4.0.0.9
+  timeZone: Australia/Brisbane
+users:
+  allowPublicRegistration: false
+  deactivateByDefault: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

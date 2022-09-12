@@ -1,0 +1,32 @@
+field: 8555c534-f063-4475-bfc8-9e2baf8294b8 # Navigation matrix
+fieldLayouts:
+  3fa48d3f-f143-40d9-959a-0d056d47f6fc:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: ff917207-a133-4c01-a8a8-d9e7bb468dfe # Menu
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  ff917207-a133-4c01-a8a8-d9e7bb468dfe: # Menu
+    columnSuffix: hehzqkhb
+    contentColumnType: text
+    fieldGroup: null
+    handle: menu
+    instructions: ''
+    name: Menu
+    searchable: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: verbb\navigation\fields\NavigationField
+handle: menuSelect
+name: 'Menu select'
+sortOrder: 1

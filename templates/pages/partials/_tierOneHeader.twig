@@ -1,0 +1,74 @@
+{% include 'partials/_mainNav' %}
+
+<section class="relative">
+
+    <div class="absolute h-auto xl:h-[300px] bg-htq_blue inset-0">
+        <img class="hidden xl:block absolute left-0 bottom-0 h-full" src="{{ siteUrl }}dist/img/header-watermark.svg" alt="" role="presentation">
+        <img class="hidden xl:block absolute right-0 bottom-0 h-full" src="{{ siteUrl }}dist/img/watermark-right-tier-one.svg" alt="" role="presentation">
+    </div>
+
+    <div class="max-w-7xl mx-auto relative pb-0 px-8 xl:px-0">
+
+        <div class="grid grid-cols-1 xl:grid-cols-12 gap-0 xl:gap-16">
+            <div class="w-full flex flex-col col-span-4">
+                <h1 class="text-white font-semibold mt-0 xl:mt-16">{{ entry.title }}</h1>
+                <div class="mt-auto">
+                    <h2 class="text-white xl:text-htq_blue text-base xl:text-md font-semibold py-8 xl:py-0">
+                        {{ entry.headerCallout }}
+                    </h2>
+                </div>
+            </div>
+            <div class="w-full flex flex-col col-span-8 lg:flex-row items-center space-x-0 lg:space-x-4 pb-16 xl:pb-0 justify-end">
+                {% set headerImages = entry.headerGallery.all() %}
+
+                {# MOBILE IMAGE #}
+                {% if headerImages | length %}
+                    {% set optimisedImage = headerImages[0].optimisedImage %}
+                    <img class="lazyload block lg:hidden w-full"
+                         src="{{ optimisedImage.placeholderBox() }}"
+                         data-srcset="{{ optimisedImage.srcset() }}"
+                         sizes="100vw" />
+                {% endif %}
+                {# END MOBILE #}
+
+                {% if headerImages | length == 3 %}
+                    <div class="hidden lg:block w-full lg:w-2/3 h-[700px] relative">
+                        {% set optimisedImage = headerImages[0].optimisedImage %}
+                        <img class="lazyload absolute object-cover w-full h-full"
+                             src="{{ optimisedImage.placeholderBox() }}"
+                             data-srcset="{{ optimisedImage.srcset() }}"
+                             sizes="100vw" />
+                    </div>
+                    <div class="hidden lg:block w-full lg:w-1/3 flex flex-col space-y-4">
+                        {% set optimisedImage = headerImages[1].optimisedImage %}
+                        <div class="aspect-w-1 aspect-h-1 relative">
+                            <img class="lazyload absolute w-full h-full object-cover"
+                                 src="{{ optimisedImage.placeholderBox() }}"
+                                 data-srcset="{{ optimisedImage.srcset() }}"
+                                 sizes="100vw" />
+                        </div>
+                        {% set optimisedImage = headerImages[2].optimisedImage %}
+                        <div class="hidden lg:block aspect-w-1 aspect-h-1 relative">
+                            <img class="lazyload absolute w-full h-full object-cover"
+                                 src="{{ optimisedImage.placeholderBox() }}"
+                                 data-srcset="{{ optimisedImage.srcset() }}"
+                                 sizes="100vw" />
+                        </div>
+                    </div>
+                {% endif %}
+                {% if headerImages | length == 1 %}
+                    <div class="hidden lg:block w-full lg:w-3/4 text-right">
+                        {% set optimisedImage = headerImages[0].optimisedImage %}
+                        <div class="w-full aspect-w-12 aspect-h-12 relative">
+                            <img class="lazyload absolute w-full h-full object-cover"
+                                 src="{{ optimisedImage.placeholderBox() }}"
+                                 data-srcset="{{ optimisedImage.srcset() }}"
+                                 sizes="100vw" />
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+</section>

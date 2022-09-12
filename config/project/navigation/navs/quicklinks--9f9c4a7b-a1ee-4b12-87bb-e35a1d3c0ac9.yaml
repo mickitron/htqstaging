@@ -1,0 +1,28 @@
+handle: quicklinks
+instructions: ''
+maxNodes: ''
+name: Quicklinks
+permissions:
+  craft\elements\Asset:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Category:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Entry:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Tag:
+    enabled: ''
+    permissions: '*'
+  verbb\navigation\nodetypes\CustomType:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: '1'
+propagateNodes: false
+siteSettings:
+  15197aeb-10d6-4ef2-a919-6bcc6108a1e8: null # Health Translation Queensland
+sortOrder: 1
+structure:
+  maxLevels: null
+  uid: 88583340-f9e7-4e3a-9e1d-c79eea2e74f5

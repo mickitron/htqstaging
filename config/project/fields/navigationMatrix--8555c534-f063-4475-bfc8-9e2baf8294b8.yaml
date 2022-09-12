@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 9b563bed-e98a-4151-909c-4d45e608fd39 # Globals
+handle: navigationMatrix
+instructions: ''
+name: 'Navigation matrix'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_navigationmatrix}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

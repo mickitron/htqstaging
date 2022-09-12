@@ -1,0 +1,28 @@
+handle: mainNavigation
+instructions: ''
+maxNodes: ''
+name: 'Main navigation'
+permissions:
+  craft\elements\Asset:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Category:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Entry:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Tag:
+    enabled: ''
+    permissions: '*'
+  verbb\navigation\nodetypes\CustomType:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: '1'
+propagateNodes: false
+siteSettings:
+  15197aeb-10d6-4ef2-a919-6bcc6108a1e8: null # Health Translation Queensland
+sortOrder: 3
+structure:
+  maxLevels: '2'
+  uid: 2be11ce8-abbd-484f-b5d5-c9b00b11e513

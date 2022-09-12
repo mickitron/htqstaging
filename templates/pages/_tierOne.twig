@@ -1,0 +1,13 @@
+{% extends 'partials/_base.twig' %}
+
+{% block content %}
+
+    {% include 'pages/partials/_tierOneHeader.twig' %}
+
+    <section>
+        <div class="max-w-7xl mx-auto py-16 font-light px-8 xl:px-0">
+            {{ entry.longFormContent | raw }}
+        </div>
+    </section>
+
+{% endblock %}

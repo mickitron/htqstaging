@@ -1,0 +1,38 @@
+{% extends 'partials/_base.twig' %}
+
+{% block content %}
+
+    {% include 'pages/partials/_tierThreeHeader.twig' %}
+
+    <section class="relative">
+
+        <img class="hidden 2xl:block absolute left-0 top-24" src="{{ siteUrl }}dist/img/tier-three-watermark.svg" alt="" role="presentation">
+
+        <div class="max-w-7xl mx-auto pt-16 font-light px-8 xl:px-0">
+            {% include 'partials/_breadcrumbSingle' %}
+            <div class="grid grid-cols-12 gap-16">
+                <div class="col-span-7 prose max-w-none pb-16">
+                    <h1>{{ entry.title }}</h1>
+                    {{ entry.longFormContent | raw }}
+                </div>
+                <div class="col-span-1">
+                    <div class="w-[1px] bg-hoverBg h-full mx-auto"></div>
+                </div>
+                {% set relatedPages = entry.relatedContent.all() %}
+                {% if relatedPages | length %}
+                    <div class="col-span-4 pb-16">
+                        <div class="bg-lightBg px-8 pb-8">
+                            <h3 class="text-md font-semibold text-htq_blue border-t-4 border-htq_blue inline-block pt-12">Relevant pages</h3>
+                            <div class="flex flex-col mt-4">
+                                {% for page in relatedPages %}
+                                    <a class="text-htq_blue text-sm py-2 border-b border-black border-opacity-20 hover:font-semibold transition duration-500 ease-in-out {{ (loop.last) ? 'border-none' }}" href="{{ page.url }}">{{ page.title }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

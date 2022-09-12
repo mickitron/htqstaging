@@ -1,0 +1,19 @@
+columnSuffix: xzmdjlbu
+contentColumnType: text
+fieldGroup: 8b7fd1bb-09d3-45b2-8a2f-6e3875ad480a # Common
+handle: heading
+instructions: ''
+name: Heading
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,19 @@
+columnSuffix: xwnwecka
+contentColumnType: text
+fieldGroup: dea8b0e0-13fa-4259-8242-58d0a6c33979 # Conference
+handle: faqTitle
+instructions: null
+name: 'FAQ Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

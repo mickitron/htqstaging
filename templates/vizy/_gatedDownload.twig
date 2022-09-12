@@ -1,0 +1,12 @@
+<div class="gatedFormWrapper">
+    {% if heading | length %}
+    <a class="openGatedForm" href="#">{{ heading }}</a>
+    {% endif %}
+
+    <div class="gatedForm bg-htq_sky bg-opacity-5 p-8 border border-lightGrey border-opacity-20 my-8" style="display: none;">
+        {% if textArea | length %}
+            {{ textArea | nl2br }}
+        {% endif %}
+        {{ formSelector.render() }}
+    </div>
+</div>

@@ -1,0 +1,38 @@
+{% extends 'partials/_base.twig' %}
+
+{% block content %}
+
+    {% include 'pages/partials/_tierTwoHeader.twig' %}
+
+    <section>
+        <div class="max-w-7xl mx-auto pt-16 font-light px-8 xl:px-0">
+            <div class="grid grid-cols-12 gap-4 lg:gap-16">
+                <div class="col-span-12 lg:col-span-7 prose max-w-none pb-8 lg:pb-16">
+                    {{ entry.longFormContent | raw }}
+                </div>
+                <div class="hidden lg:block col-span-1">
+                    <div class="w-[1px] bg-hoverBg h-full mx-auto"></div>
+                </div>
+            </div>
+            <div class="pb-8 lg:pb-16">
+                <h2 class="text-htq_blue font-bold text-lg">MRFF RART Projects</h2>
+                {% set categories = craft.categories().group('projectCategories').all() %}
+
+                {% for category in categories %}
+                    <h3 class="text-copy text-lg font-bold opacity-20 mt-8 mb-4">{{ category.title }}</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8">
+                        {% set projects = craft.entries().section('projects').relatedTo(category).all() %}
+                        {% for project in projects %}
+                            <a class="p-8 border-l-2 border-copy border-opacity-20 h-full hover:border-opacity-100 hover:border-htq_blue relative hover:bg-gradient-to-b from-lightBg transition-all duration-500 ease-in-out" href="{{ project.url }}">
+                                <h4 class="text-htq_blue font-bold mb-8">{{ project.title }}</h4>
+                                <p>{{ project.longFormContent | chop(limit=150, unit='c')  }}...</p>
+                                <p class="mt-auto absolute bottom-0 text-htq_blue font-bold">Read more</p>
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

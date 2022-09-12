@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 8b7fd1bb-09d3-45b2-8a2f-6e3875ad480a # Common
+handle: ctaSection
+instructions: null
+name: 'CTA Section'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_ctasection}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

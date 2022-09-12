@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-xl;
+    }
+    p {
+        @apply mb-4;
+    }
+
+    .footerForm input[type=text], .footerForm input[type=email] {
+        @apply px-4 py-3 bg-white bg-opacity-10 border-0 mb-2 w-full placeholder-white placeholder-opacity-50 text-sm;
+    }
+    .footerForm button {
+        @apply px-4 py-2 bg-htq_mid_teal text-sm font-semibold;
+    }
+
+    .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6, .prose strong {
+        @apply text-htq_blue !important;
+    }
+
+    .menuOverlay > li > a {
+        @apply font-bold text-htq_blue;
+    }
+
+    .menuOverlay > li > ul > li {
+        @apply mb-2;
+    }
+
+    .menuOverlay > li > ul > li > a {
+        @apply text-htq_blue font-light hover:underline mb-4;
+    }
+
+    .mainNav a {
+        @apply hover:text-white transition duration-500 ease-in-out;
+    }
+
+    .subMenu > li {
+        @apply w-full;
+    }
+
+    .subMenu > li > a {
+        @apply bg-white leading-normal block text-htq_blue font-light px-3 py-2 border-b border-htq_blue border-opacity-10 hover:border-opacity-100 hover:bg-htq_blue hover:text-white transition duration-500 ease-in-out;
+    }
+    /*.subMenu > li:first-of-type > a {*/
+    /*    @apply pt-[5px];*/
+    /*}*/
+    .subMenu > li:last-of-type > a {
+        @apply border-none;
+    }
+
+    .contactForm label {
+        @apply text-htq_blue font-semibold mb-2;
+    }
+    .contactForm input[type=text], .contactForm input[type=email], .contactForm textarea {
+        @apply bg-white border border-black border-opacity-20 px-3 py-2;
+    }
+    .contactForm button {
+        @apply bg-white p-4 border border-htq_blue text-htq_blue font-semibold;
+    }
+
+    .prose.contactText strong, .prose.contactText a {
+        @apply text-white !important;
+    }
+
+    .prose a {
+        @apply font-light !important;
+    }
+
+    .blockQuote p {
+        @apply mt-0 !important;
+    }
+    .blockQuote img {
+        @apply m-0 !important;
+    }
+    .blockQuote p:last-of-type {
+        @apply mb-0;
+    }
+    .prose a.themeLink {
+        @apply no-underline !important;
+    }
+
+    .gatedForm input {
+        @apply bg-htq_blue px-4 py-2 bg-opacity-10;
+    }
+    .gatedForm button[type=submit] {
+        @apply bg-htq_blue px-4 py-2 text-white;
+    }
+
+    .prose table  {
+        @apply w-full;
+    }
+}

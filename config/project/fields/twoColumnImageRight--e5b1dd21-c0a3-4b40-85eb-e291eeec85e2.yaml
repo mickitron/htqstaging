@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 8b7fd1bb-09d3-45b2-8a2f-6e3875ad480a # Common
+handle: twoColumnImageRight
+instructions: null
+name: 'Two Column Image Right'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_twocolumnimageright}}'
+  maxBlocks: 1
+  minBlocks: 1
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

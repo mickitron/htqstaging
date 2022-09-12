@@ -1,0 +1,15 @@
+columnSuffix: fxurkmky
+contentColumnType: string(255)
+fieldGroup: a959af84-7849-4576-a353-27dff53e179a # People
+handle: linkedin
+instructions: ''
+name: Linkedin
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: null
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

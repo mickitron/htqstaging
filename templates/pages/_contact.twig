@@ -1,0 +1,73 @@
+{% extends 'partials/_base.twig' %}
+
+{% block content %}
+
+    {% include 'pages/partials/_tierThreeHeader.twig' %}
+
+    <section>
+        <div class="max-w-7xl mx-auto py-16 font-light px-8 xl:px-0">
+            <div class="w-full lg:w-1/2">
+                <p class="font-semibold text-htq_blue">
+                    {{ entry.title | upper }}
+                </p>
+                <h1 class="mb-8 text-htq_blue font-semibold">{{ entry.heading }}</h1>
+                <div class="prose">
+                    {{ entry.richText }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative">
+        <div class="absolute h-auto md:h-80 bg-htq_blue w-full bottom-0 left-0"></div>
+        {% set contactBlock = entry.contactForm.all() %}
+        {% if contactBlock | length %}
+            {% for contact in contactBlock %}
+                <div class="max-w-7xl mx-auto bg-htq_mid_teal p-12 flex flex-col lg:flex-row space-x-0 space-y-8 lg:space-y-0 lg:space-x-16 relative">
+                    <div class="w-full lg:w-1/2">
+                        <h1 class="font-semibold text-white mt-12 mb-8">
+                            {{ contact.heading }}
+                        </h1>
+                        <div class="text-white font-light contactText prose">
+                            {{ contact.text }}
+
+                            {% if contactDetails.globalPhoneNumber %}
+                                <div class="flex flex-row space-x-4 items-center">
+                                    <img src="{{ siteUrl }}dist/img/phone-icon.svg" alt="" role="presentation">
+                                    <p class="mb-0 text-white font-light text-md">{{ contactDetails.globalPhoneNumber }}</p>
+                                </div>
+                                <div class="w-full h-[1px] bg-white bg-opacity-30"></div>
+                            {% endif %}
+                            {% if contactDetails.globalEmail %}
+                                <div class="flex flex-row space-x-4 items-center">
+                                    <img src="{{ siteUrl }}dist/img/envelope-white.svg" alt="" role="presentation">
+                                    <p class="mb-0 text-white font-light text-md break-all md:break-normal">{{ contactDetails.globalEmail }}</p>
+                                </div>
+                                <div class="w-full h-[1px] bg-white bg-opacity-30"></div>
+                            {% endif %}
+                            {% if contactDetails.globalAddress %}
+                                <div class="flex flex-row space-x-4 items-start">
+                                    <img src="{{ siteUrl }}dist/img/map-pin-icon.svg" alt="" role="presentation">
+                                    <p class="mb-0 text-white font-light text-base">{{ contactDetails.globalAddress | nl2br }}</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        {% if contact.form | length %}
+                            <div class="hidden md:block bg-white p-8 contactForm">
+                                {{ contact.form.render() }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% if contact.form | length %}
+                    <div class="block md:hidden bg-white p-8 contactForm">
+                        {{ contact.form.render() }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </section>
+
+{% endblock %}

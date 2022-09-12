@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: e7005114-b51a-43fa-b568-36cb5018a5ba # Vizy
+handle: relatedPartners
+instructions: ''
+name: 'Related partners'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: 'Add partners'
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:f9589390-5a8f-4f46-8a72-16be870d4d07' # Partners
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

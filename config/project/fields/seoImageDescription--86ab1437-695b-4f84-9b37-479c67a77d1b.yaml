@@ -1,0 +1,19 @@
+columnSuffix: hcntcuvx
+contentColumnType: text
+fieldGroup: dc0f4007-db9e-4af3-ae58-f2e0bf6a4a86 # SEO
+handle: seoImageDescription
+instructions: ''
+name: 'SEO image description'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

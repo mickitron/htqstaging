@@ -1,0 +1,115 @@
+{% extends 'partials/_base.twig' %}
+
+{% block content %}
+
+    {% include 'pages/partials/_tierThreeHeader.twig' %}
+
+    <section class="relative">
+
+        <img class="hidden 2xl:block absolute left-0 top-24" src="{{ siteUrl }}dist/img/tier-three-watermark.svg" alt="" role="presentation">
+
+        <div class="max-w-7xl mx-auto pt-16 font-light px-8 xl:px-0 relative">
+            <div class="flex flex-row space-x-4 items-center mb-8 text-htq_blue">
+                <svg class="fill-current text-htq_blue" width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.4727 5.92188L13 4.70312V2.26562C13 2.16406 12.8984 2.0625 12.7969 2.0625H11.9844C11.8574 2.08789 11.7812 2.16406 11.7812 2.26562V3.71289L8.20117 0.767578C7.97266 0.564453 7.64258 0.462891 7.3125 0.462891C6.95703 0.462891 6.62695 0.564453 6.39844 0.767578L0.126953 5.92188C0.0507812 5.99805 0 6.09961 0 6.22656C0 6.32812 0.0253906 6.42969 0.0761719 6.48047L0.355469 6.81055C0.40625 6.88672 0.533203 6.9375 0.660156 6.9375C0.761719 6.9375 0.837891 6.91211 0.914062 6.86133L1.625 6.27734V11C1.625 11.457 1.98047 11.8125 2.4375 11.8125H5.6875C6.11914 11.8125 6.47461 11.457 6.5 11V8.35938H8.125V11C8.125 11.457 8.48047 11.8125 8.9375 11.8125H12.1875C12.6191 11.8125 12.9746 11.457 13 11.0254V6.27734L13.6855 6.86133C13.7617 6.91211 13.8379 6.96289 13.9395 6.96289C14.0664 6.96289 14.1934 6.88672 14.2695 6.81055L14.5234 6.48047C14.5742 6.42969 14.625 6.32812 14.625 6.22656C14.625 6.09961 14.5488 5.99805 14.4727 5.92188ZM11.7559 10.5938H9.34375V7.95312C9.31836 7.52148 8.96289 7.16602 8.53125 7.14062H6.09375C5.63672 7.16602 5.28125 7.52148 5.28125 7.95312V10.5938H2.84375V5.28711L7.3125 1.60547L11.7812 5.28711L11.7559 10.5938Z" />
+                </svg>
+                <a class="mb-0 text-sm" href="/news-and-events">News and events</a>
+            </div>
+            <div class="pb-16">
+                <h2 class="text-lg text-htq_blue font-bold mb-4">Latest news and events</h2>
+                {% set latestThreeNewsItems = craft.entries().section('newsAndEvents').limit(3) %}
+                {% for row in latestThreeNewsItems.all()|batch(3, 'No item') %}
+                    <div class="grid grid-cols-12 gap-6">
+                        {% for entry in row %}
+                            <a href="{{ entry.url }}" class="{{ loop.index == 1 ? 'col-span-12 lg:col-span-6' : 'col-span-12 lg:col-span-3' }} relative hover:bg-gradient-to-b hover:from-hoverBg transition duration-500 ease-in-out flex flex-col group">
+                                <div class="absolute h-full w-1 bg-htq_blue left-0 top-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out" style="z-index: 2;"></div>
+                                <div class="absolute w-[1px] h-full bg-copy opacity-20"></div>
+                                {% if entry.featuredImage.one() | length %}
+                                    {% set optimisedImages = entry.featuredImage.one().optimisedImage %}
+                                    <div class="w-full h-64 relative">
+                                        <div class="w-full h-full inset-0 bg-htq_blue absolute bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-500 ease-in-out" style="z-index: 1;"></div>
+                                        <img class="lazyload absolute w-full h-full object-cover"
+                                             src="{{ optimisedImages.placeholderBox() }}"
+                                             data-srcset="{{ optimisedImages.srcset() }}"
+                                             sizes="100vw" />
+                                        <div class="absolute bottom-0 right-0 bg-white p-3">
+                                            <p class="text-copy mb-0 uppercase text-sm tracking-widest font-bold">{{ entry.type }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-8">
+                                        <h3 class="text-md text-htq_blue font-bold">{{ entry.title }}</h3>
+                                        <p><small>{{ entry.postDate | date("d F Y") }}</small></p>
+                                    </div>
+                                    <div class="mt-auto px-8">
+                                        <div class="flex flex-row space-x-4">
+                                            {% if entry.newsAndEventsCategories | length %}
+                                                <p class="mb-0 text-htq_mid_teal text-xs">{{ entry.newsAndEventsCategories.one().title }}</p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            {% set offsetThreeNewsItems = craft.entries().section('newsAndEvents').offset(3).limit(8) %}
+
+            {% if offsetThreeNewsItems | length %}
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                {% paginate offsetThreeNewsItems as pageInfo, pageEntries %}
+                {% for entry in pageEntries %}
+                    <a href="{{ entry.url }}" class="relative hover:bg-gradient-to-b hover:from-hoverBg transition duration-500 ease-in-out flex flex-col group">
+                        <div class="absolute h-full w-1 bg-htq_blue left-0 top-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out" style="z-index: 2;"></div>
+                        <div class="absolute w-[1px] h-full bg-copy opacity-20"></div>
+                        {% if entry.featuredImage.one() | length %}
+                            {% set optimisedImages = entry.featuredImage.one().optimisedImage %}
+                            <div class="w-full h-40 relative">
+                                <div class="w-full h-full inset-0 bg-htq_blue absolute bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-500 ease-in-out" style="z-index: 1;"></div>
+                                <img class="lazyload absolute w-full h-full object-cover"
+                                     src="{{ optimisedImages.placeholderBox() }}"
+                                     data-srcset="{{ optimisedImages.srcset() }}"
+                                     sizes="100vw" />
+                            </div>
+                        {% else %}
+                            <div class="w-full h-40 relative">
+                                <div class="w-full h-full inset-0 bg-htq_blue absolute bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-500 ease-in-out" style="z-index: 1;"></div>
+                                <img class="absolute w-full h-full object-cover"
+                                     src="{{ siteUrl }}dist/img/placeholder-image.jpg"/>
+                            </div>
+                        {% endif %}
+                        <div class="p-8">
+                            <h3 class="text-base font-bold text-htq_blue">{{ entry.title }}</h3>
+                            <p><small>{{ entry.postDate | date("d F Y") }}</small></p>
+                        </div>
+                        <div class="mt-auto px-8">
+                            <div class="flex flex-row space-x-4">
+                                <p class="mb-0 text-htq_blue font-bold text-xs">Read more</p>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+                </div>
+                <div class="flex flex-row space-x-4 py-16 text-htq_blue justify-center">
+                    <a href="{{ pageInfo.firstUrl }}">First Page</a>
+                    {% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}">Previous Page</a>{% endif %}
+
+                    {% for page, url in pageInfo.getPrevUrls(5) %}
+                        <a href="{{ url }}">{{ page }}</a>
+                    {% endfor %}
+
+                    <span class="current text-copy">{{ pageInfo.currentPage }}</span>
+
+                    {% for page, url in pageInfo.getNextUrls(5) %}
+                        <a href="{{ url }}">{{ page }}</a>
+                    {% endfor %}
+
+                    {% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}">Next Page</a>{% endif %}
+                </div>
+
+            {% endif %}
+        </div>
+    </section>
+
+{% endblock %}

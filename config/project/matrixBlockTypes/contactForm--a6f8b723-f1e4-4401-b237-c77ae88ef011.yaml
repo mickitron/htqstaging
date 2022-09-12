@@ -1,0 +1,199 @@
+field: 823bd892-9bda-4ef9-bed3-6aa33cc14a7d # Conference Contact
+fieldLayouts:
+  4253a8a7-f787-4b3f-b6ce-8a6007f2ccd3:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 8ec4adb1-d840-4014-9030-211c4ec9348d # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7707c313-a308-4100-a4da-2ce5e1f6a4bf
+            warning: null
+            width: 100
+          -
+            fieldUid: ab5c4bd4-b866-4e61-9578-4cde3f5f90a5 # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: db0818d7-2a3e-48f7-90fe-f1e0444f54ed
+            warning: null
+            width: 100
+          -
+            fieldUid: 42a60ade-7a1a-4a10-8313-d93e706ebeb4 # Phone
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 23b696b2-eaa2-4b43-9c49-aa3c0164d900
+            warning: null
+            width: 100
+          -
+            fieldUid: 7d473205-9bd8-4f31-9726-930556d515c2 # Email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d0374b3d-1fe2-4ae1-9e33-5a63bf224eb3
+            warning: null
+            width: 100
+          -
+            fieldUid: acb4094f-5cda-44cb-a41c-3304d201edff # Address
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5b701779-0062-4f09-b118-b50b2f5325a0
+            warning: null
+            width: 100
+          -
+            fieldUid: ec57ae84-8a92-476d-a6cc-fd49efd4c101 # Form
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3bb923e2-68fa-40dd-8f2e-4653bfd7cdcf
+            warning: null
+            width: 100
+        name: Content
+        uid: 2cda9bb7-6f4b-40b5-8098-ea56c502c1f5
+fields:
+  7d473205-9bd8-4f31-9726-930556d515c2: # Email
+    columnSuffix: wjlcrtax
+    contentColumnType: text
+    fieldGroup: null
+    handle: email
+    instructions: null
+    name: Email
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  8ec4adb1-d840-4014-9030-211c4ec9348d: # Heading
+    columnSuffix: ppgjebfx
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  42a60ade-7a1a-4a10-8313-d93e706ebeb4: # Phone
+    columnSuffix: gwlgcesw
+    contentColumnType: text
+    fieldGroup: null
+    handle: phone
+    instructions: null
+    name: Phone
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ab5c4bd4-b866-4e61-9578-4cde3f5f90a5: # Text
+    columnSuffix: otcgbtho
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  acb4094f-5cda-44cb-a41c-3304d201edff: # Address
+    columnSuffix: vifoxzhz
+    contentColumnType: text
+    fieldGroup: null
+    handle: address
+    instructions: null
+    name: Address
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  ec57ae84-8a92-476d-a6cc-fd49efd4c101: # Form
+    columnSuffix: drwhmmfr
+    contentColumnType: integer
+    fieldGroup: null
+    handle: form
+    instructions: null
+    name: Form
+    searchable: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: Solspace\Freeform\FieldTypes\FormFieldType
+handle: contactForm
+name: 'Contact Form'
+sortOrder: 1

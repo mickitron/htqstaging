@@ -1,0 +1,105 @@
+fieldLayouts:
+  b04bb4a6-3df9-40d4-860a-9d62c12b2b99:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 2bce40b7-9398-434b-82fb-585b98f8e295
+            warning: null
+            width: 100
+          -
+            fieldUid: 365ec52a-7c5e-429d-988b-524ddd0a7432 # Photo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a1eba697-8129-4d3d-a51c-44ee28addfef
+            warning: null
+            width: 100
+          -
+            fieldUid: 8707648a-9998-4457-9b18-fc3848d3e0aa # Position and qualifications
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7b311bf-cf54-491d-85ff-db9daa48d007
+            warning: null
+            width: 100
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 8071a007-6e54-42e0-9cda-92de594eddff
+          -
+            fieldUid: bed35530-e001-400b-a49a-a26b982b32a3 # Biography
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 64b11aa0-db1f-423d-a26d-244a5521f78d
+            warning: null
+            width: 100
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 4712d394-9f49-47d0-9389-65e40a13406d
+          -
+            fieldUid: dd699421-ac61-45ea-8a24-71c9e064bf7c # Email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 686868fe-3f48-420f-b75d-4c9f33b8dd0b
+            warning: null
+            width: 100
+          -
+            fieldUid: 11b137a3-153c-4d01-ac56-3e0b5c61db75 # Twitter
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2b8b2dd1-6433-4dd3-82f0-fbe8cd343fb9
+            warning: null
+            width: 100
+          -
+            fieldUid: 33c0f42a-d414-43c7-b7fc-d2077272f51e # Linkedin
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d10d459a-0f25-4020-a6e4-dc48cbba1c81
+            warning: null
+            width: 100
+        name: Content
+        uid: d4254d7b-42d6-4dd5-9f7b-519150d80f61
+handle: default
+hasTitleField: true
+name: Default
+section: 046979bd-ffd2-482c-9a03-7709fe409eb7 # Speakers
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,99 @@
+field: 7e7a9ccd-98aa-494e-a3cb-51f94a2198f8 # Contact form
+fieldLayouts:
+  1245361b-b39d-4431-946c-2f27c89d4801:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 6ffaa276-c7d1-46e1-8767-505d06579675 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 268f7e67-9aa8-48a6-8328-b6318093a95a # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f1df5233-847b-430b-9043-460f7bdc7263 # Form
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  6ffaa276-c7d1-46e1-8767-505d06579675: # Heading
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  268f7e67-9aa8-48a6-8328-b6318093a95a: # Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: Text
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  f1df5233-847b-430b-9043-460f7bdc7263: # Form
+    columnSuffix: null
+    contentColumnType: integer
+    fieldGroup: null
+    handle: form
+    instructions: ''
+    name: Form
+    searchable: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: Solspace\Freeform\FieldTypes\FormFieldType
+handle: contactForm
+name: 'Contact form'
+sortOrder: 1

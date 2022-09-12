@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: dea8b0e0-13fa-4259-8242-58d0a6c33979 # Conference
+handle: conferenceSponsors
+instructions: null
+name: 'Conference Sponsors'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_conferencesponsors}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

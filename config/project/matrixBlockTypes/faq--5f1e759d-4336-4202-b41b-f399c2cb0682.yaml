@@ -1,0 +1,80 @@
+field: fe8184cc-ecc8-4f0c-9b55-533379a46965 # FAQ Accordion
+fieldLayouts:
+  4a951e87-7144-4ea8-82be-abe065b7a4d3:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f616ef20-5ffe-4f59-a6f2-e9d8a7bfebc4 # Question
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1a9285da-b29b-4088-944b-247fef078fe3
+            warning: null
+            width: 100
+          -
+            fieldUid: d37d540f-6af9-4e6a-8237-101fa610a3b6 # Answer
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 196f92f7-557c-4ea5-81a8-f1f5de410ba0
+            warning: null
+            width: 100
+        name: Content
+        uid: 7d446223-838e-4c42-a23f-944e3dafc405
+fields:
+  d37d540f-6af9-4e6a-8237-101fa610a3b6: # Answer
+    columnSuffix: bophfqhf
+    contentColumnType: text
+    fieldGroup: null
+    handle: answer
+    instructions: null
+    name: Answer
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  f616ef20-5ffe-4f59-a6f2-e9d8a7bfebc4: # Question
+    columnSuffix: ugvyprvq
+    contentColumnType: text
+    fieldGroup: null
+    handle: question
+    instructions: null
+    name: Question
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: faq
+name: FAQ
+sortOrder: 1

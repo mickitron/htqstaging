@@ -1,0 +1,99 @@
+field: ba25f04a-0d5b-4984-a6ec-91cda844741a # Theme leaders
+fieldLayouts:
+  6dc601b2-4746-4e67-ae6b-f66d20a6e4b2:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 74322e32-f257-4ff6-9642-355a91776e25 # Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0bd44ba4-9388-4a00-8cd3-106bb21453ba # Institution
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: cf6530e8-6780-44fc-8d47-824a74e32868 # External link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0bd44ba4-9388-4a00-8cd3-106bb21453ba: # Institution
+    columnSuffix: wceesnlb
+    contentColumnType: text
+    fieldGroup: null
+    handle: institution
+    instructions: ''
+    name: Institution
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  74322e32-f257-4ff6-9642-355a91776e25: # Name
+    columnSuffix: uvsfidij
+    contentColumnType: text
+    fieldGroup: null
+    handle: themeLeaderName
+    instructions: ''
+    name: Name
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  cf6530e8-6780-44fc-8d47-824a74e32868: # External link
+    columnSuffix: wjdqsduv
+    contentColumnType: text
+    fieldGroup: null
+    handle: externalLink
+    instructions: ''
+    name: 'External link'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: themeLeader
+name: 'Theme leader'
+sortOrder: 1

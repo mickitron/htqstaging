@@ -1,0 +1,37 @@
+fieldLayouts:
+  03a094d8-6e7e-4ce2-9b28-2494a278071b:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: b8b3bb80-a6b2-49f9-974b-138441e1ab1d # Global phone number
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 195cd33f-850c-4b23-a7b6-c2c12bbd78a5 # Global email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 492b0bb4-2091-4398-a210-564b3c12ae20 # Global address
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: CONTENT
+        sortOrder: 1
+handle: contactDetails
+name: 'Contact details'
+sortOrder: 5
